@@ -1,0 +1,14 @@
+#login-box {
+    border: 1px solid blue;
+    width: 100%;
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 15%;
+    background: #00000080;
+    padding: 20px 50px;
+}
+
+#login-box h1 {
+    color: white;
+}
+
