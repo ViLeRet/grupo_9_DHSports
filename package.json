@@ -1,0 +1,27 @@
+{
+  "name": "grupo_9_dhsports",
+  "version": "1.0.0",
+  "description": "En este sitio vas a encontrar productos de primera calidad utilizado por aquellas personas que dedican parte de su vida al entrenamiento deportivo.  Nuestra propuesta se orienta a personas que realicen actividad física de forma amateur o profesional en práctias como basket, football, natación, runnig y fitness.",
+  "main": "app.js",
+  "scripts": {
+    "dev": "nodemon app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ViLeRet/grupo_9_DHSports.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ViLeRet/grupo_9_DHSports/issues"
+  },
+  "homepage": "https://github.com/ViLeRet/grupo_9_DHSports#readme",
+  "dependencies": {
+    "express": "^4.18.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  }
+}
