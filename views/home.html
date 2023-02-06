@@ -3,19 +3,111 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bienvenidos a DH Sports</title>
-    
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="stylesHome.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital@0;1&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/08763d4032.js" crossorigin="anonymous"></script>
+    <title>Home</title>
 </head>
 <body>
-    <header>
-        <h1 align = center>Bienvenidos a DH Sports</h1>
 
-    </header> 
+    <article class="header-busqueda">   
+
+        <header class="main-header">
+    
+            <div class="encabezado">
+    
+                <div class="menu">
+                    
+                    <i class="fa-solid fa-bars" class="menu-bars"></i>
+    
+                </div>
+    
+                <div class="imagen-logo">
+    
+                    <img class="logo" src="image/logo.jpg" alt="logo">
+    
+                </div>
+                
+                <div class="login">
+    
+                    <i class="fa-solid fa-user"></i>
+    
+                </div>
+    
+                <div class="carrito">
+    
+                    <i class="fa-sharp fa-solid fa-cart-shopping"></i>
+    
+                </div>
+    
+    
+            </div>
+    
+            
+        </header>
+                                    <!--BARRA DE BUSQUEDA  -->
+        <div class="barra-de-busqueda">
+            
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <input type="search" class="input" placeholder="Buscar..." class="buscar">
+    
+        </div>
+
+    </article>
+
+
+
+
     <main>
-       
-        <h4 align = right><a href="http://localhost:3500/login">Ingresa a tu cuenta</a></h4>
-        
+
+        <div class="titulo-deportes">
+
+            <h1 class="deporte-favorito">¡Todo lo que necesitas para tú deporte favorito!</h1>
+
+        </div>
+
+        <section class="imagenes-deportes">
+
+            <div class="deporte">
+
+                <img class="running" src="/image/running.jpg" alt="running">
+
+                <p>Running</p>
+                
+            </div>
+
+            <div class="deporte">
+
+                <img class= "futbol" src="/image/futbol.jpg" alt="futbol">
+
+                <p>Fútbol</p>
+
+            </div>
+
+            <div class="deporte">
+
+                <img class="basquet" src="/image/basquet.jpg" alt="basquet">
+
+                <p>Básquet</p>
+            </div>
+
+            <div class="deporte">
+
+                <img  class="natacion"  src="/image/natacion.jpeg" alt="natacion">
+
+                <p>Natación</p>
+            </div>
+
+        </section>
+
     </main>
+
+    <footer>
+
+    </footer>
+    
 </body>
 </html>
