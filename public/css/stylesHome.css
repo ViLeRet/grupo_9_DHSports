@@ -15,8 +15,9 @@ body{
     
 }
 .logo {
-    width: 100%;
-    max-height: 100px;
+   margin: 100px;
+   height: auto;
+   width: auto;
 }
 
 .encabezado {
