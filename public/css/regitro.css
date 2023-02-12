@@ -119,6 +119,7 @@ main{
     border-radius: 3px;
     cursor: pointer;
     transition: .1s ease all;
+    margin-top: 50px;
 }
 .formulario-btn:hover{
     box-shadow: 3px 0 30px rgba(163, 163, 163, 1);
@@ -132,6 +133,10 @@ main{
 
 .mensaje-exito-activo{
     display: block;
+}
+
+.formulario-checkbox{
+    margin-top: 65px;
 }
 
 /* Estilos de la validacion */
