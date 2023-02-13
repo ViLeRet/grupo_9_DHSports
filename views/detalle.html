@@ -9,12 +9,10 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital@0;1&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/08763d4032.js" crossorigin="anonymous"></script>
-    <title>Página principal</title>
+    <title>Detalle</title>
     
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Página principal</title>
-
-    <link href="/css/stylesHome.css" rel="stylesheet">
+    <title>Detalle</title>
     
     <link href="/css/detalle.css" rel="stylesheet">
 
@@ -33,7 +31,7 @@
                 <ul class="menu-celular">
 
                     <li><a class="links-encabezado" href="/">Inicio</a></li>
-        
+
                     <li><a class="links-encabezado" href="/registro">Regístrate <i class="fa-regular fa-id-card"></i></a></li>
 
                     <li><a class="links-encabezado" href="/login">Ingresa <i class="fa-solid fa-right-to-bracket"></i></a></li>
@@ -47,11 +45,11 @@
             <div class="logobarra-mitad">
 
                 <div class="div-logo">
-                    <a class="link-logo" href="/"><img src="./images/logo-jpg.jpg" alt="Logo de DH Sports" class="logoDH"></a>
+                    <img src="./images/logo-jpg.jpg" alt="Logo de DH Sports" class="logoDH">
                 </div>
                 <div class="busqueda2">
 
-                    <form action="/busqueda" method="GET">
+                    <form action="/busqueda.html" method="GET">
     
                         <input type="search" placeholder="Buscar producto, deporte..." id="buscador-productos2">
     
@@ -83,7 +81,7 @@
 
             <div class="busqueda1">
 
-                <form action="/busqueda" method="GET">
+                <form action="/busqueda.html" method="GET">
 
                     <input type="search" placeholder="Buscar producto, deporte..." id="buscador-productos">
 
@@ -99,47 +97,57 @@
     </header>
 
 
+
     <main>
 
-        <div class="titulo-deportes">
+    
 
-            <h1 class="deporte-favorito">¡Todo lo que necesitas para tú deporte favorito!</h1>
+            <div class="productos">
 
-        </div>
+                <h3 class="nombre-producto">Pelota de baloncesto</h3>
 
-        <section class="imagenes-deportes">
-            
-            <div class="deporte">
-                
-               <img class="running" src="/images/running.jpg" alt="running">
+                <div class="productos-flex">
 
-                <p>Running</p>
-                
+                <div class="lista-imagenes">
+
+                    <img class="imagen-grande" src="./images/pelota-basquet.jpg" alt="Pelota de baloncesto">
+
+                    <div class="imagenes-flex">
+
+                    <img class="imagenes-pequeñas" src="./images/baloncesto2.jpg" alt="Pelota de baloncesto">
+
+                    <img class="imagenes-pequeñas" src="./images/baloncesto3.jpg" alt="Pelota de baloncesto">
+
+                    <img class="imagenes-pequeñas" src="./images/baloncesto5.jpg" alt="Pelota de baloncesto">
+
+                    </div>
+
+                </div>
+
+                    <div class="descripciones-desktop">
+
+                        <div class="descripcion-producto">
+                        Balón de baloncesto de talla 7 oficial para jugar a baloncesto en exterior o interior, para niños y adultos. Con gran resistencia.
+                        </div>
+
+                        <br>
+
+                        <h3 class="precio-producto">$2.003</h3>
+
+                        <div class="boton" id="boton-desktop">
+                            <button type="submit" class="boton-agregar"><a href="./compras">Agregar al Carrito</a></button>
+                        </div>
+
+                    </div>
+
+                </div>
+
             </div>
 
-            <div class="deporte">
-
-                <img class= "futbol" src="/images/futbol.jpg" alt="futbol">
-
-                <p>Fútbol</p>
-
+            <div class="boton" id="boton-main">
+                <button type="submit" class="boton-agregar"><a href="./compras">Agregar al Carrito</a></button>
             </div>
 
-            <div class="deporte">
-
-                <img class="basquet" src="/images/basquet.jpg" alt="basquet">
-
-                <p>Básquet</p>
-            </div>
-
-            <div class="deporte">
-
-                <img  class="natacion"  src="/images/natacion.jpeg" alt="natacion">
-
-                <p>Natación</p>
-            </div>
-
-        </section>
 
     </main>
 

@@ -1,0 +1,317 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-size: 12px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    box-sizing: border-box;
+    margin: 0px;
+}
+.navBar{
+    background-color: #f4eadb;
+    align-items: center;
+    padding: 10px;
+}
+.main-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.div-logo{
+    width: 50vw;
+    margin-right: 50px;
+    text-align: center;
+}
+.logobarra-mitad{
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.logoDH{
+    width: 100%
+}
+.menu-celular{
+    display: none;
+    position: absolute;
+    width: 100%;
+    overflow: auto;
+    box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.4);
+}
+.busqueda2{
+    display: none;
+}
+.fa-bars{
+    margin: auto;
+    text-align: center;
+    width: 2em;
+    background-color:blueviolet;
+    color: white;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    padding: 5px 0;
+    margin-top: 20px;
+    transition: all 400ms;
+}
+.burguer-menu{
+    width: 25vw;
+    text-align: center;
+    margin: auto;
+    display: inline-block;
+    position: relative;
+    z-index: 10
+}
+.burguer-menu:hover{
+    transform: scale(1.2,1.2);
+}
+.burguer-menu:hover .menu-celular{
+    display: block;
+}
+.burguer-menu a{
+    display: block;
+    color: #000000;
+    padding: 5px;
+    text-decoration: none;
+    background-color: #00A4BD;
+}
+.burguer-menu a:hover{
+    background-color:#f4eadb;
+}
+ul{
+    list-style: none;
+}
+.menu-tablet{
+    display: none;
+}
+.links-encabezado{
+    text-decoration: none;
+    color: black;
+    transition: all 400ms;
+}
+.links-encabezado:hover{
+    transform: scale(1.5,1.5);
+}
+.busqueda1{
+    position:relative;
+    z-index: 2;
+}
+#lupa-uno{
+    position: absolute;
+    right: 10px;
+    top: 11px;
+}
+#buscador-productos{
+    width: 100%;
+    height: 4vh;
+    border-radius: 5px;
+    border: none;
+}
+#carrito-compras{
+    width: 10vw;
+    margin: auto;
+}
+.fa-cart-shopping{
+    transform:scale(2);
+    color: blueviolet;
+}
+main{
+    background-color: rgba(0, 217, 255, 0.99);
+    padding: 10px 0;
+}
+.productos{
+    background-color: white;
+    margin: 10px;
+    padding: 10px;
+    font-size: 16px;
+}
+.lista-imagenes{
+    width: 100%;
+}
+.imagen-grande{
+    width: 100%;
+}
+.imagenes-pequeñas{
+    width: 22vw;
+    margin: 10px;
+}
+.imagenes-flex{
+    display: flex;
+    justify-content: space-around;
+}
+.precio-producto{
+    color:blueviolet;
+    text-align: right;
+    margin: 10px;
+    padding: 10px;
+}
+.boton-agregar{
+    background-color: rgb(255, 230, 0);
+    margin: 10px;
+    padding: 10px;
+    width: 95%;
+    border-radius: 5px;
+    border: 0;
+    font-size: 16px;
+}
+.boton{
+    text-align: center;
+}
+.boton-agregar a{
+    text-decoration: none;
+    color: #000000;
+}
+footer{
+    text-align: center;
+    background-color: #f4eadb;
+    margin: auto;
+    font-size: 16px;
+    padding: 30px 10px;
+
+}
+.pie-flex{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+}
+.frases-pie{
+    text-align: center;
+    margin: 0 10px;
+    margin: auto;
+    width: 30vw;
+}
+#boton-desktop{
+    display: none;
+}
+@media(min-width:768px){
+    body{
+        font-size: 18px;
+    }
+    .menu-tablet{
+        display: block;
+        width: 16vw;
+        margin-left: 10px ;
+        text-align: end;
+    }
+    .menu-tablet i{
+        color: blueviolet;
+    }
+    .burguer-menu{
+        display: none;
+    }
+    .busqueda1{
+        display: none;
+    }
+    .busqueda2{
+        display: block;
+        position:relative;
+        z-index: 2;
+    }
+    #lupa-dos{
+        position: absolute;
+        right: 10px;
+        top: 11px;
+    }
+    #buscador-productos2{
+        width: 30vw;
+        height: 4vh;
+        border-radius: 5px;
+        border: none;
+        margin-right: 10px;
+    }
+    #carrito-compras{
+        display: none;
+    }
+    .div-logo{
+        width: 40vw;
+        margin-right: 50px;
+        text-align: center;
+    }
+    .nombre-producto{
+        font-size: 30px;
+    }
+    .descripcion-producto{
+        font-size: 24px;
+    }
+    .precio-producto{
+        font-size: 28px;
+    }
+    .lista-imagenes{
+        width: 100%;
+        display: flex;
+    }
+    .imagenes-pequeñas{
+        width: 17vw;
+        margin: 10px;
+    }
+    .imagenes-flex{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+
+}
+@media(min-width: 992px){
+    #lupa-dos{
+        position: absolute;
+        right: 15px;
+        top: 6px;
+    }
+    .menu-tablet{
+        display: flex;
+        width: 30vw;
+        margin-left: 10px;
+        text-align: center;
+        justify-content: space-between;
+        font-size: 16px;
+    }
+    .busqueda2{
+        display: block;
+        position:relative;
+    }
+    #buscador-productos2{
+        width: 20vw;
+        height: 4vh;
+        border-radius: 5px;
+        border: none;
+        margin-right: 10px;
+    }
+    .div-logo{
+        width: 30vw;
+        margin-right: 10px;
+        text-align: center;
+    }
+    .main-header{
+        display: block;
+    }
+    .lista-imagenes {
+        width: 60%;
+        display: flex;
+        flex-direction: row-reverse;
+    }
+    #boton-main{
+        display: none;
+    }
+    #boton-desktop{
+        display: block;
+    }
+    .descripciones-desktop{
+        width: 20vw;
+    }
+    .productos-flex{
+        background-color: white;
+        margin: 10px;
+        padding: 10px;
+        font-size: 16px;
+        display: flex;
+        justify-content: space-around;
+    }
+    .imagen-grande{
+        width: 42vw;
+        height: 42vw;    
+    }
+    .imagenes-pequeñas{
+        width: 10vw;
+    }
+}
