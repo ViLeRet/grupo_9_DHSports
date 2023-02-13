@@ -25,7 +25,6 @@ app.get('/registro', (req, res) => {
     res.sendFile(path.join(__dirname, '/views/registro.html'));
 });
 
-
 app.listen(3500, ()=> {
     console.log('Servidor iniciado en http://localhost:3500');
 });
