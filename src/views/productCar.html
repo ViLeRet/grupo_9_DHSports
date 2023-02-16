@@ -4,19 +4,19 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width">
-    <link rel="stylesheet" href="stylesHome.css">
+    <link rel="stylesheet" href="../css/login.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital@0;1&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/08763d4032.js" crossorigin="anonymous"></script>
-    <title>Página principal</title>
+    <title>Ingreso</title>
     
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Página principal</title>
+    <title>Ingreso</title>
 
-    <link href="/css/stylesHome.css" rel="stylesheet">
+    <link href="../login.html" rel="stylesheet">
     
-    <link href="/css/detalle.css" rel="stylesheet">
+    <link href="../css/productDetail.css" rel="stylesheet">
 
 </head>
 
@@ -34,11 +34,11 @@
 
                     <li><a class="links-encabezado" href="/">Inicio</a></li>
         
-                    <li><a class="links-encabezado" href="/registro">Regístrate <i class="fa-regular fa-id-card"></i></a></li>
+                    <li><a class="links-encabezado" href="/register">Regístrate <i class="fa-regular fa-id-card"></i></a></li>
 
                     <li><a class="links-encabezado" href="/login">Ingresa <i class="fa-solid fa-right-to-bracket"></i></a></li>
 
-                    <li><a class="links-encabezado" href="/compras">Mis compras <i class="fa-solid fa-basket-shopping"></i></a></li>
+                    <li><a class="links-encabezado" href="/productcar">Mis compras <i class="fa-solid fa-basket-shopping"></i></a></li>
     
                 </ul>
 
@@ -47,7 +47,7 @@
             <div class="logobarra-mitad">
 
                 <div class="div-logo">
-                    <a class="link-logo" href="/"><img src="./images/logo-jpg.jpg" alt="Logo de DH Sports" class="logoDH"></a>
+                    <a class="link-logo" href="/"><img src="../img/logo-jpg.jpg" alt="Logo de DH Sports" class="logoDH"></a>
                 </div>
                 <div class="busqueda2">
 
@@ -61,15 +61,15 @@
     
                 </div>
 
-                <div id="carrito-compras"><a href="/compras"><i class="fa-solid fa-cart-shopping"></i></a> </div>
+                <div id="carrito-compras"><a href="/productCar"><i class="fa-solid fa-cart-shopping"></i></a> </div>
 
                 <ul class="menu-tablet">
         
-                    <li><a class="links-encabezado" href="/registro">Regístrate <i class="fa-regular fa-id-card"></i></a></li>
+                    <li><a class="links-encabezado" href="/register">Regístrate <i class="fa-regular fa-id-card"></i></a></li>
                     <br>
                     <li><a class="links-encabezado" href="/login">Ingresa <i class="fa-solid fa-right-to-bracket"></i></a></li>
                     <br>
-                    <li><a class="links-encabezado" href="/compras">Mis compras <i class="fa-solid fa-basket-shopping"></i></a></li>
+                    <li><a class="links-encabezado" href="/productCar">Mis compras <i class="fa-solid fa-basket-shopping"></i></a></li>
     
                 </ul>
 
@@ -98,49 +98,31 @@
 
     </header>
 
-
     <main>
+    <form action="#" method="POST">
+        <div id="login-box">
+            <h1>DHSPORTS</h1>
+            <img src="../img/logo-jpg.jpg" alt="Imagen DH Sports">
 
-        <div class="titulo-deportes">
-
-            <h1 class="deporte-favorito">¡Todo lo que necesitas para tú deporte favorito!</h1>
-
-        </div>
-
-        <section class="imagenes-deportes">
+            <div class="form">
+                <div class="item"> 
+                    <i class="fa-solid fa-user"></i>
+                    <input type="text" placeholder="Usuario" name="username" > 
+                </div>
+                
+                <div class="item"> 
+                    <i class="fa-solid fa-lock"></i>  
+                    <input type="password" placeholder="Contraseña" name="password"> 
+                </div>
+                
+            </div>
             
-            <div class="deporte">
-                
-               <img class="running" src="/images/running.jpg" alt="running">
-
-                <p>Running</p>
-                
+            <div>
+                <p>olvidaste la contraseña</p>
             </div>
-
-            <div class="deporte">
-
-                <img class= "futbol" src="/images/futbol.jpg" alt="futbol">
-
-                <p>Fútbol</p>
-
-            </div>
-
-            <div class="deporte">
-
-                <img class="basquet" src="/images/basquet.jpg" alt="basquet">
-
-                <p>Básquet</p>
-            </div>
-
-            <div class="deporte">
-
-                <img  class="natacion"  src="/images/natacion.jpeg" alt="natacion">
-
-                <p>Natación</p>
-            </div>
-
-        </section>
-
+            <button type="submit">Ingresa a tu cuenta</button> 
+        </div>
+    </form> 
     </main>
 
     <footer>
@@ -182,3 +164,7 @@
 </body>
 </html>
     
+
+
+</body>
+</html>

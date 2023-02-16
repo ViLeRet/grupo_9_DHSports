@@ -2,9 +2,9 @@
   "name": "grupo_9_dhsports",
   "version": "1.0.0",
   "description": "En este sitio vas a encontrar productos de primera calidad utilizado por aquellas personas que dedican parte de su vida al entrenamiento deportivo.  Nuestra propuesta se orienta a personas que realicen actividad física de forma amateur o profesional en práctias como basket, football, natación, runnig y fitness.",
-  "main": "app.js",
+  "main": "src/app.js",
   "scripts": {
-    "dev": "nodemon app.js",
+    "dev": "nodemon src/app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
