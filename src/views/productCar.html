@@ -4,17 +4,17 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width">
-    <link rel="stylesheet" href="../css/login.css">
+    <link rel="stylesheet" href="../css/productCar.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital@0;1&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/08763d4032.js" crossorigin="anonymous"></script>
-    <title>Ingreso</title>
+    <title>Carrito</title>
     
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ingreso</title>
+    <title>Carrito</title>
 
-    <link href="../login.html" rel="stylesheet">
+    <link href="../css/productCar.css" rel="stylesheet">
     
     <link href="../css/productDetail.css" rel="stylesheet">
 
@@ -38,7 +38,7 @@
 
                     <li><a class="links-encabezado" href="/login">Ingresa <i class="fa-solid fa-right-to-bracket"></i></a></li>
 
-                    <li><a class="links-encabezado" href="/productcar">Mis compras <i class="fa-solid fa-basket-shopping"></i></a></li>
+                    <li><a class="links-encabezado" href="/productCar">Mis compras <i class="fa-solid fa-basket-shopping"></i></a></li>
     
                 </ul>
 
@@ -47,7 +47,7 @@
             <div class="logobarra-mitad">
 
                 <div class="div-logo">
-                    <a class="link-logo" href="/"><img src="../img/logo-jpg.jpg" alt="Logo de DH Sports" class="logoDH"></a>
+                    <a class="link-logo" href="/"><img src="./images/logo-jpg.jpg" alt="Logo de DH Sports" class="logoDH"></a>
                 </div>
                 <div class="busqueda2">
 
@@ -98,73 +98,96 @@
 
     </header>
 
+
+    <section class="banner">
+        <img src="/images/banner-jpg.jpg" alt="Banner de ofertas">
+    </section>
     <main>
-    <form action="#" method="POST">
-        <div id="login-box">
-            <h1>DHSPORTS</h1>
-            <img src="../img/logo-jpg.jpg" alt="Imagen DH Sports">
-
-            <div class="form">
-                <div class="item"> 
-                    <i class="fa-solid fa-user"></i>
-                    <input type="text" placeholder="Usuario" name="username" > 
-                </div>
-                
-                <div class="item"> 
-                    <i class="fa-solid fa-lock"></i>  
-                    <input type="password" placeholder="Contraseña" name="password"> 
-                </div>
-                
+        <section class="last-visit">
+            <h3>Basado en tu última visita</h3>
+            <div class="products">
+                <article>
+                    <img src="/images/nike-air-zoom.jpg" alt="Calzado " class="product_img">
+                    <div class="main-article">
+                        <i class="fas fa-truck"></i>
+                        <p class="price">$25.000</p> 
+                        <p class="discount">40% off</p>
+                        <h4 class="description">Zapatilla Nike</h4>
+                    </div>
+                </article>
+                <article>
+                    <img src="/images/zapatillas-running.jpg" alt="Calzado" class="product_img">
+                    <div class="main-article">
+                        <i class="fas fa-truck"></i>
+                        <p class="price">$32.000</p>
+                        <p class="discount">20% off</p>
+                        <h4 class="description">Zapatillas de running</h4>
+                    </div>
+                </article>
+                <article>
+                    <img src="/images/pelota-basquet.jpg" alt="Pelota de Basquet"
+                        class="product_img">
+                    <div class="main-article">
+                        <i class="fas fa-truck"></i>
+                        <p class="price">$5.000</p>
+                        <p class="discount">10% off</p>
+                        <h4 class="description">Pelota Spalding</h4>
+                    </div>
+                </article>
+                <article>
+                    <img src="/images/botines-futbol.jpg" alt="Calzado" class="product_img">
+                    <div class="main-article">
+                        <i class="fas fa-truck"></i>
+                        <p class="price">$32.000</p>
+                        <p class="discount">20% off</p>
+                        <h4 class="description">Botines Adidas</h4>
+                    </div>
+                </article>
             </div>
+        </section>
+
+        <footer>
+
+            <div class="pie-flex">
+    
+                <div class="frases-pie">Aceptamos todas las tarjetas</div>
+    
+                <br>
+    
+                <div class="frases-pie">Envíos gratis a toda Latinoamerica</div>
+    
+                <br>
+    
+                <div class="frases-pie">¡Encontrarás la mayor variedad del mercado!</div>
+    
+                <br>
+    
+            </div>
+    
+            <br>
+    
+            <div class="pie">
+    
+                <h3>© 2023 DH™ Sports.</h3>
+    
+                <br>
+    
+                <div>Los mejores productos para el deporte</div>
+    
+                <br>
+    
+                <div>ecommerce.dh@sports.com</div>
             
-            <div>
-                <p>olvidaste la contraseña</p>
             </div>
-            <button type="submit">Ingresa a tu cuenta</button> 
-        </div>
-    </form> 
-    </main>
-
-    <footer>
-
-        <div class="pie-flex">
-
-            <div class="frases-pie">Aceptamos todas las tarjetas</div>
-
-            <br>
-
-            <div class="frases-pie">Envíos gratis a toda Latinoamerica</div>
-
-            <br>
-
-            <div class="frases-pie">¡Encontrarás la mayor variedad del mercado!</div>
-
-            <br>
-
-        </div>
-
-        <br>
-
-        <div class="pie">
-
-            <h3>© 2023 DH™ Sports.</h3>
-
-            <br>
-
-            <div>Los mejores productos para el deporte</div>
-
-            <br>
-
-            <div>ecommerce.dh@sports.com</div>
+    
+        </footer>
         
-        </div>
-
-    </footer>
-    
-</body>
-</html>
+    </body>
+    </html>
+        
     
 
 
 </body>
+
 </html>

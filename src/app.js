@@ -14,4 +14,4 @@ app.use('/', mainController);
 const port = process.env.PORT || 3500;
 app.listen(port,()=>{
     console.log(`server starter on: http://localhost:${port}`);
-})
+});
