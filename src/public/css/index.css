@@ -83,8 +83,12 @@ body{
 .deporte{
     margin: auto;
     width: 80vw;
-    padding: 10px
-
+    padding: 10px;
+    transition: all 400ms;
+}
+.deporte:hover{
+    transform: scale(1.15,1.15);
+    background-color: blanchedalmond;
 }
 .imagenes-deportes{
     background-color: #f4eadb;
@@ -98,9 +102,15 @@ body{
 }
 .foto-deporte{
     width: 100%;
+    transition: all 400ms;
 }
+
 .nombre-deporte{
     font-style: 24px;
+}
+.link-deporte{
+    text-decoration: none;
+    color: black;
 }
 @media(min-width: 768px){
     .imagenes-deportes{
