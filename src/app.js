@@ -16,7 +16,7 @@ app.get('/comprasbasket', (req, res) => {
     res.sendFile(path.join(__dirname, '/views/comprasbasket.html'));
 });
 app.get('/comprasntacion', (req, res) => {
-    res.sendFile(path.join(__dirname, '/views/comprasntacion.html'));
+    res.sendFile(path.join(__dirname, '/views/comprasnatacion.html'));
 });
 app.get('/comprasfutbol', (req, res) => {
     res.sendFile(path.join(__dirname, '/views/comprasfutbol.html'));

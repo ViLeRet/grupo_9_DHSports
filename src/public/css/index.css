@@ -80,19 +80,40 @@ body{
     padding: 20px;
     text-align: center;
 }                  
-
-.imagenes-deportes, .deporte{
-    display: flex;
-}
-
 .deporte{
-    flex-direction: column;
-    margin: 0 5px;
-    max-width: 160px;
-}
+    margin: auto;
+    width: 80vw;
+    padding: 10px
 
+}
 .imagenes-deportes{
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
+    background-color: #f4eadb;
+    margin: 20px;
+    text-align: center;
+}
+.cuerpo-main{
+    background-color: white;
+    margin: 5px;
+    padding: 5px;
+}
+.foto-deporte{
+    width: 100%;
+}
+.nombre-deporte{
+    font-style: 24px;
+}
+@media(min-width: 768px){
+    .imagenes-deportes{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+    .deporte{
+        width: 40%;
+    }
+}
+@media(min-width: 992px){
+    .deporte{
+        width: 23%;
+    }
 }
