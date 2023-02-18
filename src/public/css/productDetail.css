@@ -133,7 +133,14 @@ main{
 .imagen-grande{
     width: 100%;
 }
+.imagen-grande101{
+    width: 100%;
+}
 .imagenes-pequeñas{
+    width: 30%;
+    margin: 10px;
+}
+.imagenes-pequeñas101{
     width: 22vw;
     margin: 10px;
 }
@@ -185,9 +192,7 @@ footer{
 #boton-desktop{
     display: none;
 }
-@media{
-    
-}
+
 @media(min-width:768px){
     body{
         font-size: 18px;
@@ -254,6 +259,13 @@ footer{
         flex-direction: column;
         justify-content: space-evenly;
     }
+    .imagen-grande101{
+        width: 73%;
+    }
+    .imagenes-pequeñas101{
+        width: 24vw;
+        margin: 10px
+    }
 
 }
 @media(min-width: 992px){
@@ -315,7 +327,15 @@ footer{
         width: 42vw;
         height: 42vw;    
     }
+    .imagen-grande101{
+        width: 73%;
+    }
     .imagenes-pequeñas{
         width: 10vw;
+    }
+    .imagenes-pequeñas101{
+        width: 96%;
+        margin: 5px;
+        padding-right:10px
     }
 }

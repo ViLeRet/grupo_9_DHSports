@@ -1,205 +1,188 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="../css/index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital@0;1&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/08763d4032.js" crossorigin="anonymous"></script>
+    <title>Página principal</title>
+    
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" rel="stylesheet" />
-    <link rel="stylesheet" href="/css/compras.css">
-    <title>dhsports</title>
+    <title>Página principal</title>
+
+    <link href="../css/index.css" rel="stylesheet">
+    
+    <link href="../css/productDetail.css" rel="stylesheet">
+
 </head>
 
 <body>
-    <header>
-        <div class="logo-container">
-            <div class="logo-bar-container">
-                    <div class="logo">
-                        <a href="/"><img src="/images/logo-jpg.jpg" alt="logo"></a>
-                    </div>
-                <div class="search-button-container">
-                    <div class="search-container">
-                        <input type="text" placeholder=" buscar productos,marcas...">
-                        <button><i class="fas fa-search"></i></button>
-                    </div>
-                </div>
-            </div>
-        <div class="card-container">
-            <h2 class="car-title">aprovecha y disfruta de nosotros.</h2>
-        </div>
-    </div>
 
-<div class="menu-container">
-    <ul>
-        <li>ofertas</li>
-        <li>tiendas oficiales</li>
-        <li>vender</li>
-        <li>ayuda</li>
-    </ul>
-    <ul>
-        <li><a href="/register">crea tu cuenta<i class="fas fa-id-card"></i></a> </li>
-        <li><a href="/login">ingresa <i class="fas fa-sign-in-alt"></i></a> </li>
-        <li>mis compras <i class="fas fa-shopping-basket"></i> </li>
+    <header class="navBar">
 
-    </ul>
-</div>
+        <div class="main-header">
 
-    <div class="burguer-container">
-        <div class="burguer-menu">
-            <i class="fas fa-bars"></i>
-        </div>
-    </div>
-    </header>
-    <section class="carrusel">
-        <div class="container-slider">
-            <div class="container">
-                <input type="radio" name="slider" id="item-1" checked>
-                <input type="radio" name="slider" id="item-2">
-                <input type="radio" name="slider" id="item-3">
-                <input type="radio" name="slider" id="item-4">
-                <input type="radio" name="slider" id="item-5">
-                
-                <div class="cards">
-                    <label class="card" for="item-1" id="selector-1">
-                        <img src="/images/baner/banner-Natacion.jpg" alt="">
-                    </label>
-                    <label class="card" for="item-2" id="selector-2">
-                        <img src="/images/baner/futbol baner2futbol.jpg" alt="">
-                    </label>
-                    <label class="card" for="item-3" id="selector-3">
-                        <img src="/images/baner/futbol2.jpg" alt="">
-                        
-                    </label>
-                    <label class= "card" for="item-4"  id="selector-4">
-                        <img src="/images/baner/img2basket.jpg" alt="">
-                    </label>
-                    <label class= "card" for="item-5"id="selector-5" >
-                        <img src="/images/baner/splash-basketball-pano-banner.jpg" alt="">
-                    </label>
-                    
-                </div>
-            </div>
-        </div>
-    </section>
-    <figure class="icon-cards">
-        <div class="icon-cards__content">
-            
-            <div class="icon-cards__item"></div>
-            <div class="icon-cards__item"></div>
-            <div class="icon-cards__item"></div>
-            <div class="icon-cards__item"></div>
-            <div class="icon-cards__item"></div>
-        </div>
+            <div class="burguer-menu">
+
+               <i class="fas fa-bars"></i>
+
+                <ul class="menu-celular">
+
+                    <li><a class="links-encabezado" href="/">Inicio</a></li>
         
-    </div>
-</figure>
+                    <li><a class="links-encabezado" href="/register">Regístrate <i class="fa-regular fa-id-card"></i></a></li>
+
+                    <li><a class="links-encabezado" href="/login">Ingresa <i class="fa-solid fa-right-to-bracket"></i></a></li>
+
+                    <li><a class="links-encabezado" href="/productCar">Mis compras <i class="fa-solid fa-basket-shopping"></i></a></li>
+    
+                </ul>
+
+            </div>
+
+            <div class="logobarra-mitad">
+
+                <div class="div-logo">
+                    <a class="link-logo" href="/"><img src="../images/logo-jpg.jpg" alt="Logo de DH Sports" class="logoDH"></a>
+                </div>
+                <div class="busqueda2">
+
+                    <form action="/busqueda" method="GET">
+    
+                        <input type="search" placeholder="Buscar producto, deporte..." id="buscador-productos2">
+    
+                        <i id="lupa-dos" class="fa fa-search"></i>
+                        
+                    </form>
+    
+                </div>
+
+                <div id="carrito-compras"><a href="/productCar"><i class="fa-solid fa-cart-shopping"></i></a> </div>
+
+                <ul class="menu-tablet">
+        
+                    <li><a class="links-encabezado" href="/register">Regístrate <i class="fa-regular fa-id-card"></i></a></li>
+                    <br>
+                    <li><a class="links-encabezado" href="/login">Ingresa <i class="fa-solid fa-right-to-bracket"></i></a></li>
+                    <br>
+                    <li><a class="links-encabezado" href="/productCar">Mis compras <i class="fa-solid fa-basket-shopping"></i></a></li>
+    
+                </ul>
+
+            </div>
+
+        </div>
+
+        
+        
+
+
+            <div class="busqueda1">
+
+                <form action="/busqueda" method="GET">
+
+                    <input type="search" placeholder="Buscar producto, deporte..." id="buscador-productos">
+
+                    <i id="lupa-uno" class="fa fa-search"></i>
+                    
+                </form>
+
+            </div>
+
+      
+
+
+    </header>
+
+
     <main>
-        <section class="last-visit">
-            <h3>para ti</h3>
-            <div class="products">
-                <article>
-                    <img src="/images/futbol/canilleras.jpg" alt="botines" class="product_img">
-                    <div class="main-article">
-<i class="fa-solid fa-motorcycle"></i>
-                        <p class="price">$6.770</p>
-                        <p class="discount">40% off</p>
-                        <h4 class="description">botines nike</h4>
-                    </div>
-                </article>
-                <article>
-                    <img src="/images/futbol/guantes.jpg" alt="MacBook" class="product_img">
-                    <div class="main-article">
-<i class="fa-solid fa-motorcycle"></i>
-                        <p class="price">$230.000</p>
-                        <p class="discount">20% off</p>
-                        <h4 class="description">canilleras adidas</h4>
-                    </div>
-                </article>
-                <article>
-                    <img src="/images/futbol/Mochilas-1021x527.jpg" alt="Teléfono Móvil Samsung Galaxy"
-                        class="product_img">
-                    <div class="main-article">
-<i class="fa-solid fa-motorcycle"></i>
-                        <p class="price">$70.500</p>
-                        <p class="discount">10% off</p>
-                        <h4 class="description">guantes redmtion</h4>
-                    </div>
-                </article>
-                <article>
-                    <img src="/images/futbol/platos.jpg" alt="SmartTv Samsung" class="product_img">
-                    <div class="main-article">
-<i class="fa-solid fa-motorcycle"></i>
-                        <p class="price">$23.200</p>
-                        <p class="discount">5% off</p>
-                        <h4 class="description">mochila tubo"</h4>
-                    </div>
-                </article>
+
+        <div class="cuerpo-main">
+
+            <div class="titulo-deportes">
+
+                <h1 class="deporte-favorito">¡Fútbol!</h1>
+
             </div>
-        </section>
-        <section class="offers">
-            <h3>basado en ultimas vistas</h3>
-            <div class="products">
-                <article>
-                    <img src="/images/botines-futbol.jpg" alt="Cafetera" class="product_img">
-                    <div class="main-article">
-<i class="fa-solid fa-motorcycle"></i>
-                        <p class="price">$6.770</p>
-                        <p class="discount">40% off</p>
-                        <h4 class="description">botines nike</h4>
-                    </div>
-                </article>
-                <article>
-                    <img src="/images/nike-air-zoom.jpg" alt="MacBook" class="product_img">
-                    <div class="main-article">
-<i class="fa-solid fa-motorcycle"></i>
-                        <p class="price">$230.000</p>
-                        <p class="discount">20% off</p>
-                        <h4 class="description">zapatilla nike air</h4>
-                    </div>
-                </article>
-                <article>
-                    <img src="/images/pelota-basquet.jpg" alt="Teléfono Móvil Samsung Galaxy"
-                        class="product_img">
-                    <div class="main-article">
-<i class="fa-solid fa-motorcycle"></i>
-                        <p class="price">$70.500</p>
-                        <p class="discount">10% off</p>
-                        <h4 class="description">pelota baloncesto</h4>
-                    </div>
-                </article>
-                <article>
-                    <img src="/images/natacion/mallanatacion.jpg" class="product_img">
-                    <div class="main-article">
-<i class="fa-solid fa-motorcycle"></i>
-                        <p class="price">$23.200</p>
-                        <p class="discount">5% off</p>
-                        <h4 class="description">malla natacion dama</h4>
-                    </div>
-                </article>
-            </div>
-        </section>
+
+            <section class="imagenes-deportes">
+
+            
+                <div class="deporte">
+                
+                <a href="/productDetail201" class="link-deporte"><img class="foto-deporte" src="../images/futbol-1-01.avif" alt="Balón de fútbol">
+
+                    <h3 class="nombre-deporte">Balón de fútbol híbrido talla 5 fifa basic f500 nieve y niebla rojo</h3></a>
+                
+                </div>
+
+                <div class="deporte">
+
+                    <a href="productDetail202" class="link-deporte"><img class= "foto-deporte" src="../images/futbol-2-01.avif" alt="Guayos">
+
+                    <h3 class="nombre-deporte">Guayos kipsta agility 100 terreno firme adulto</h3></a>
+
+                </div>
+
+                <div class="deporte">
+
+                    <a href="/productDetail203" class="link-deporte"><img class="foto-deporte" src="../images/futbol-3-01.avif" alt="Medias">
+
+                    <h3 class="nombre-deporte">Medias de fútbol adulto f100 blanco</h3></a>
+                </div>
+
+                <div class="deporte">
+
+                    <a href="/productDetail204" class="link-deporte"><img  class="foto-deporte"  src="../images/futbol-4-01.avif" alt="Portería">
+
+                    <h3 class="nombre-deporte">Cancha de fútbol kipsta portería l talla s blanco</h3></a>
+                </div>
+
+            </section>
+
+        </div>
+
     </main>
-    <footer >
-        <h3>© 2023 DH™ Sports.</h3>
+
+    <footer>
+
+        <div class="pie-flex">
+
+            <div class="frases-pie">Aceptamos todas las tarjetas</div>
+
+            <br>
+
+            <div class="frases-pie">Envíos gratis a toda Latinoamerica</div>
+
+            <br>
+
+            <div class="frases-pie">¡Encontrarás la mayor variedad del mercado!</div>
+
+            <br>
+
+        </div>
 
         <br>
 
-        <div>Los mejores productos para el deporte</div>
+        <div class="pie">
 
-        <br>
+            <h3>© 2023 DH™ Sports.</h3>
 
-        <div>ecommerce.dh@sports.com</div>
-    <div class="pie">
-        <p> © 1999-2023 dh@sports S.R.L.</p>
-    </div>
+            <br>
+
+            <div>Los mejores productos para el deporte</div>
+
+            <br>
+
+            <div>ecommerce.dh@sports.com</div>
+        
+        </div>
+
+    </footer>
+    
 </body>
-
 </html>
-
-
-
-
-
-
-

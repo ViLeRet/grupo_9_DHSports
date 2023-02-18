@@ -4,17 +4,15 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width">
-    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="../css/productDetail.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital@0;1&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/08763d4032.js" crossorigin="anonymous"></script>
-    <title>Página principal</title>
+    <title>Detalle</title>
     
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Página principal</title>
-
-    <link href="../css/index.css" rel="stylesheet">
+    <title>Detalle</title>
     
     <link href="../css/productDetail.css" rel="stylesheet">
 
@@ -33,7 +31,7 @@
                 <ul class="menu-celular">
 
                     <li><a class="links-encabezado" href="/">Inicio</a></li>
-        
+
                     <li><a class="links-encabezado" href="/register">Regístrate <i class="fa-regular fa-id-card"></i></a></li>
 
                     <li><a class="links-encabezado" href="/login">Ingresa <i class="fa-solid fa-right-to-bracket"></i></a></li>
@@ -51,7 +49,7 @@
                 </div>
                 <div class="busqueda2">
 
-                    <form action="/busqueda" method="GET">
+                    <form action="/busqueda.html" method="GET">
     
                         <input type="search" placeholder="Buscar producto, deporte..." id="buscador-productos2">
     
@@ -83,7 +81,7 @@
 
             <div class="busqueda1">
 
-                <form action="/busqueda" method="GET">
+                <form action="/busqueda.html" method="GET">
 
                     <input type="search" placeholder="Buscar producto, deporte..." id="buscador-productos">
 
@@ -99,52 +97,57 @@
     </header>
 
 
+
     <main>
 
-        <div class="cuerpo-main">
+    
 
-            <div class="titulo-deportes">
+            <div class="productos">
 
-                <h1 class="deporte-favorito">¡Running!</h1>
+                <h3 class="nombre-producto">Vestido de baño tipo bóxer natación 100 basic hombre gris</h3>
+
+                <div class="productos-flex">
+
+                <div class="lista-imagenes">
+
+                    <img class="imagen-grande101" src="./images/natacion-2-01.avif" alt="Vestido de baño hombre">
+
+                    <div class="imagenes-flex">
+
+                    <img class="imagenes-pequeñas101" src="./images/natacion-2-02.avif" alt="Vestido de baño hombre">
+
+                    <img class="imagenes-pequeñas101" src="./images/natacion-2-03.avif" alt="Vestido de baño hombre">
+
+                    <img class="imagenes-pequeñas101" src="./images/natacion-2-04.avif" alt="Vestido de baño hombre">
+
+                    </div>
+
+                </div>
+
+                    <div class="descripciones-desktop">
+
+                        <div class="descripcion-producto">
+                            Nuestros equipos de diseño han creado este vestido de baño para hombres que deseen iniciar en la práctica de la natación.
+                        </div>
+
+                        <br>
+
+                        <h3 class="precio-producto">$1.025</h3>
+
+                        <div class="boton" id="boton-desktop">
+                            <button type="submit" class="boton-agregar"><a href="./compras">Agregar al Carrito</a></button>
+                        </div>
+
+                    </div>
+
+                </div>
 
             </div>
 
-            <section class="imagenes-deportes">
+            <div class="boton" id="boton-main">
+                <button type="submit" class="boton-agregar"><a href="./productCar">Agregar al Carrito</a></button>
+            </div>
 
-            
-                <div class="deporte">
-                
-                <a href="/productDetail101" class="link-deporte"><img class="foto-deporte" src="../images/running-1-01.avif" alt="Tenis mujer">
-
-                    <h3 class="nombre-deporte">Tenis running kalenji run 100 mujer gris</h3></a>
-                
-                </div>
-
-                <div class="deporte">
-
-                    <a href="productDetail102" class="link-deporte"><img class= "foto-deporte" src="../images/running-2-01.avif" alt="Medias">
-
-                    <h3 class="nombre-deporte">Medias gruesas de running run900 strap negro azul</h3></a>
-
-                </div>
-
-                <div class="deporte">
-
-                    <a href="/productDetail103" class="link-deporte"><img class="foto-deporte" src="../images/running-3-01.avif" alt="Pantaloneta">
-
-                    <h3 class="nombre-deporte">Pantaloneta transpirable hombre running dry negro</h3></a>
-                </div>
-
-                <div class="deporte">
-
-                    <a href="/productDetail104" class="link-deporte"><img  class="foto-deporte"  src="../images/running-4-01.avif" alt="natacion">
-
-                    <h3 class="nombre-deporte">Tenis caminar ciudad hombre soft 140 mesh negro blanco</h3></a>
-                </div>
-
-            </section>
-
-        </div>
 
     </main>
 
