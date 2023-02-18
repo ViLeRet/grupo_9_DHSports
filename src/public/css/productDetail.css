@@ -48,7 +48,7 @@ body{
     margin: auto;
     text-align: center;
     width: 2em;
-    background-color:blueviolet;
+    background-color:rgb(86,53,2);
     color: white;
     margin-bottom: 10px;
     border-radius: 4px;
@@ -115,7 +115,7 @@ ul{
 }
 .fa-cart-shopping{
     transform:scale(2);
-    color: blueviolet;
+    color: rgb(86, 53, 2);
 }
 main{
     background-color: rgb(86, 53, 2);
@@ -204,7 +204,7 @@ footer{
         text-align: end;
     }
     .menu-tablet i{
-        color: blueviolet;
+        color: rgb(86, 53, 2);
     }
     .burguer-menu{
         display: none;
