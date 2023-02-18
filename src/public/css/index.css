@@ -86,9 +86,19 @@ body{
     padding: 10px;
     transition: all 400ms;
 }
+.deporte-carrito{
+    margin: auto;
+    width: 80vw;
+    padding: 10px;
+    transition: all 400ms;
+}
 .deporte:hover{
     transform: scale(1.15,1.15);
     background-color: blanchedalmond;
+}
+.deporte-carrito:hover{
+    transform: scale(1.15,1.15);
+    background-color: blanchedalmond; 
 }
 .imagenes-deportes{
     background-color: #f4eadb;
@@ -112,6 +122,23 @@ body{
     text-decoration: none;
     color: black;
 }
+.precio-total{
+    text-align: right;
+    padding-right: 30px;
+}
+.boton-pagar{
+    background-color: rgb(255, 230, 0);
+    margin: 10px;
+    padding: 10px;
+    width: 95%;
+    border-radius: 5px;
+    border: 0;
+    font-size: 16px;
+}
+.boton-pagar a{
+    text-decoration: none;
+    color: #000000;
+}
 @media(min-width: 768px){
     .imagenes-deportes{
         display: flex;
@@ -121,9 +148,21 @@ body{
     .deporte{
         width: 40%;
     }
+    .deporte-carrito{
+        width: 40%;
+    }
+    .boton-carrito{
+        width: 100%
+    }
+    .boton-pagar{
+        width: 30%;
+    }
 }
 @media(min-width: 992px){
     .deporte{
         width: 23%;
+    }
+    .deporte-carrito{
+        width: 30%;
     }
 }

@@ -1,11 +1,13 @@
 #login-box {
-    border: 1px solid blue;
-    width: 100%;
     text-align: center;
-    margin: 0 auto;
-    margin-top: 15%;
+    margin: 10px;
     background: #f4eadb;
-    padding: 20px 50px;
+    padding: 20px 37px;
+}
+.main-login{
+    background-color: white;
+    padding: 10px;
+    margin: 10px;
 }
 
 #login-box h1 {
@@ -25,6 +27,7 @@ button{
     background-color: bisque;
     border: none;
 }
-img{
+.logo-login{
     opacity: 15%;
+    width: 78%;
 }
