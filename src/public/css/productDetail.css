@@ -48,6 +48,7 @@ body {
     width: 100%;
     overflow: auto;
     box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.4);
+    border-radius: 10px;
 }
 
 .busqueda2 {
@@ -89,7 +90,7 @@ body {
     color: #000000;
     padding: 5px;
     text-decoration: none;
-    background-color: #00A4BD;
+    background-color: #B2AD74;
 }
 
 .burguer-menu a:hover {
@@ -130,6 +131,7 @@ ul {
     height: 4vh;
     border-radius: 5px;
     border: none;
+    text-align: center;
 }
 
 #carrito-compras {
@@ -235,7 +237,7 @@ footer {
 
 @media(min-width:768px) {
     body {
-        font-size: 18px;
+        font-size: 10px;
     }
 
     .menu-tablet {
@@ -275,6 +277,7 @@ footer {
         border-radius: 5px;
         border: none;
         margin-right: 10px;
+        text-align: center;
     }
 
     #carrito-compras {
