@@ -1,54 +1,64 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap');
-*{
+
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-body{
+
+body {
     font-size: 12px;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     box-sizing: border-box;
     margin: 0px;
-    background-color:#f4eadb;
+    background-color: #f4eadb;
 }
-.navBar{
+
+.navBar {
     background-color: #f4eadb;
     align-items: center;
     padding: 10px;
 }
-.main-header{
+
+.main-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
-.div-logo{
+
+.div-logo {
     width: 50vw;
     margin-right: 50px;
     text-align: center;
 }
-.logobarra-mitad{
-    display:flex;
+
+.logobarra-mitad {
+    display: flex;
     align-items: center;
     justify-content: space-between;
 }
-.logoDH{
+
+.logoDH {
     width: 100%
 }
-.menu-celular{
+
+.menu-celular {
     display: none;
     position: absolute;
     width: 100%;
     overflow: auto;
     box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.4);
 }
-.busqueda2{
+
+.busqueda2 {
     display: none;
 }
-.fa-bars{
+
+.fa-bars {
     margin: auto;
     text-align: center;
     width: 2em;
-    background-color:rgb(86,53,2);
+    background-color: #B2AD74;
     color: white;
     margin-bottom: 10px;
     border-radius: 4px;
@@ -56,7 +66,8 @@ body{
     margin-top: 20px;
     transition: all 400ms;
 }
-.burguer-menu{
+
+.burguer-menu {
     width: 25vw;
     text-align: center;
     margin: auto;
@@ -64,97 +75,120 @@ body{
     position: relative;
     z-index: 10
 }
-.burguer-menu:hover{
-    transform: scale(1.2,1.2);
+
+.burguer-menu:hover {
+    transform: scale(1.2, 1.2);
 }
-.burguer-menu:hover .menu-celular{
+
+.burguer-menu:hover .menu-celular {
     display: block;
 }
-.burguer-menu a{
+
+.burguer-menu a {
     display: block;
     color: #000000;
     padding: 5px;
     text-decoration: none;
     background-color: #00A4BD;
 }
-.burguer-menu a:hover{
-    background-color:#f4eadb;
+
+.burguer-menu a:hover {
+    background-color: #f4eadb;
 }
-ul{
+
+ul {
     list-style: none;
 }
-.menu-tablet{
+
+.menu-tablet {
     display: none;
 }
-.links-encabezado{
+
+.links-encabezado {
     text-decoration: none;
     color: black;
     transition: all 400ms;
 }
-.links-encabezado:hover{
-    transform: scale(1.5,1.5);
+
+.links-encabezado:hover {
+    transform: scale(1.5, 1.5);
 }
-.busqueda1{
-    position:relative;
+
+.busqueda1 {
+    position: relative;
     z-index: 2;
 }
-#lupa-uno{
+
+#lupa-uno {
     position: absolute;
     right: 10px;
     top: 11px;
 }
-#buscador-productos{
+
+#buscador-productos {
     width: 100%;
     height: 4vh;
     border-radius: 5px;
     border: none;
 }
-#carrito-compras{
+
+#carrito-compras {
     width: 10vw;
     margin: auto;
 }
-.fa-cart-shopping{
-    transform:scale(2);
-    color: rgb(86, 53, 2);
+
+.fa-cart-shopping {
+    transform: scale(2);
+    color: #B2AD74;
 }
-main{
-    background-color: rgb(86, 53, 2);
+
+main {
+    background-color: #B2AD74;
     padding: 10px 0;
 }
-.productos{
+
+.productos {
     background-color: white;
     margin: 10px;
     padding: 10px;
     font-size: 16px;
 }
-.lista-imagenes{
+
+.lista-imagenes {
     width: 100%;
 }
-.imagen-grande{
+
+.imagen-grande {
     width: 100%;
 }
-.imagen-grande101{
+
+.imagen-grande101 {
     width: 100%;
 }
-.imagenes-pequeñas{
+
+.imagenes-pequeñas {
     width: 30%;
     margin: 10px;
 }
-.imagenes-pequeñas101{
+
+.imagenes-pequeñas101 {
     width: 22vw;
     margin: 10px;
 }
-.imagenes-flex{
+
+.imagenes-flex {
     display: flex;
     justify-content: space-around;
 }
-.precio-producto{
-    color:blueviolet;
+
+.precio-producto {
+    color: blueviolet;
     text-align: right;
     margin: 10px;
     padding: 10px;
 }
-.boton-agregar{
+
+.boton-agregar {
     background-color: rgb(255, 230, 0);
     margin: 10px;
     padding: 10px;
@@ -163,14 +197,17 @@ main{
     border: 0;
     font-size: 16px;
 }
-.boton{
+
+.boton {
     text-align: center;
 }
-.boton-agregar a{
+
+.boton-agregar a {
     text-decoration: none;
     color: #000000;
 }
-footer{
+
+footer {
     text-align: center;
     background-color: #f4eadb;
     margin: auto;
@@ -178,103 +215,125 @@ footer{
     padding: 30px 10px;
 
 }
-.pie-flex{
+
+.pie-flex {
     display: flex;
     justify-content: space-between;
     flex-wrap: nowrap;
 }
-.frases-pie{
+
+.frases-pie {
     text-align: center;
     margin: 0 10px;
     margin: auto;
     width: 30vw;
 }
-#boton-desktop{
+
+#boton-desktop {
     display: none;
 }
 
-@media(min-width:768px){
-    body{
+@media(min-width:768px) {
+    body {
         font-size: 18px;
     }
-    .menu-tablet{
+
+    .menu-tablet {
         display: block;
         width: 16vw;
-        margin-left: 10px ;
+        margin-left: 10px;
         text-align: end;
     }
-    .menu-tablet i{
-        color: rgb(86, 53, 2);
+
+    .menu-tablet i {
+        color: #b2ad74
     }
-    .burguer-menu{
+
+    .burguer-menu {
         display: none;
     }
-    .busqueda1{
+
+    .busqueda1 {
         display: none;
     }
-    .busqueda2{
+
+    .busqueda2 {
         display: block;
-        position:relative;
+        position: relative;
         z-index: 2;
     }
-    #lupa-dos{
+
+    #lupa-dos {
         position: absolute;
         right: 10px;
         top: 11px;
     }
-    #buscador-productos2{
+
+    #buscador-productos2 {
         width: 30vw;
         height: 4vh;
         border-radius: 5px;
         border: none;
         margin-right: 10px;
     }
-    #carrito-compras{
+
+    #carrito-compras {
         display: none;
     }
-    .div-logo{
+
+    .div-logo {
         width: 40vw;
         margin-right: 50px;
         text-align: center;
     }
-    .nombre-producto{
+
+    .nombre-producto {
         font-size: 30px;
     }
-    .descripcion-producto{
+
+    .descripcion-producto {
         font-size: 24px;
     }
-    .precio-producto{
+
+    .precio-producto {
         font-size: 28px;
     }
-    .lista-imagenes{
+
+    .lista-imagenes {
         width: 100%;
         display: flex;
     }
-    .imagenes-pequeñas{
+
+    .imagenes-pequeñas {
         width: 17vw;
         margin: 10px;
     }
-    .imagenes-flex{
+
+    .imagenes-flex {
         display: flex;
         flex-direction: column;
         justify-content: space-evenly;
     }
-    .imagen-grande101{
+
+    .imagen-grande101 {
         width: 73%;
     }
-    .imagenes-pequeñas101{
+
+    .imagenes-pequeñas101 {
         width: 24vw;
         margin: 10px
     }
 
 }
-@media(min-width: 992px){
-    #lupa-dos{
+
+@media(min-width: 992px) {
+    #lupa-dos {
         position: absolute;
         right: 15px;
         top: 6px;
     }
-    .menu-tablet{
+
+    .menu-tablet {
         display: flex;
         width: 30vw;
         margin-left: 10px;
@@ -282,40 +341,49 @@ footer{
         justify-content: space-between;
         font-size: 16px;
     }
-    .busqueda2{
+
+    .busqueda2 {
         display: block;
-        position:relative;
+        position: relative;
     }
-    #buscador-productos2{
+
+    #buscador-productos2 {
         width: 20vw;
         height: 4vh;
         border-radius: 5px;
         border: none;
         margin-right: 10px;
     }
-    .div-logo{
+
+    .div-logo {
         width: 30vw;
         margin-right: 10px;
         text-align: center;
     }
-    .main-header{
+
+    .main-header {
         display: block;
     }
+
     .lista-imagenes {
         width: 60%;
         display: flex;
         flex-direction: row-reverse;
     }
-    #boton-main{
+
+    #boton-main {
         display: none;
     }
-    #boton-desktop{
+
+    #boton-desktop {
         display: block;
     }
-    .descripciones-desktop{
+
+    .descripciones-desktop {
         width: 20vw;
     }
-    .productos-flex{
+
+    .productos-flex {
         background-color: white;
         margin: 10px;
         padding: 10px;
@@ -323,19 +391,23 @@ footer{
         display: flex;
         justify-content: space-around;
     }
-    .imagen-grande{
+
+    .imagen-grande {
         width: 42vw;
-        height: 42vw;    
+        height: 42vw;
     }
-    .imagen-grande101{
+
+    .imagen-grande101 {
         width: 73%;
     }
-    .imagenes-pequeñas{
+
+    .imagenes-pequeñas {
         width: 10vw;
     }
-    .imagenes-pequeñas101{
+
+    .imagenes-pequeñas101 {
         width: 96%;
         margin: 5px;
-        padding-right:10px
+        padding-right: 10px
     }
 }
