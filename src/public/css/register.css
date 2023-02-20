@@ -1,24 +1,33 @@
 * {
+    padding: 0;
+    margin: 0;
     box-sizing: border-box;
 }
-
+main {
+    margin: 10px -14px 10px 1px;
+    background-color: #B2AD74;
+    padding: 10px;
+}
 html {
     background-color: #f4eadb;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    width: 100%;
 }
+.logobarra-mitad{
+    margin: -37px;
+
+    padding: 71px;
+}
+
 
 .new-account {
     text-align: center;
 }
 
-main {
-    width: 100%;
-    /* padding: 40px; */
-    background-color: rgb(86, 53, 2);
-}
+
 .main-registro{
     background-color: #f4eadb;
-    margin: 5px 10px;
+    margin: 5px 7px 14px 7px;
     padding: 10px;
 }
 
@@ -144,9 +153,90 @@ main {
 .formulario-checkbox {
     margin-top: 65px;
 }
+.busqueda1{
+    margin: 9px 20px;
+}
 
+.frases{
+    padding: 5px;
+}
+p{
+    padding: 10px;
+}
+.pie{
+    text-align: center;
+}
 /* Estilos de la validacion */
 
 
 /* Mediaqueries */
+@media (min-width: 768px){
+    
+    .logobarra-mitad{
+        margin: -48px 161px 0px -69px;
+}
+    
+        main {
+            margin: -49px -108px 7px -3px;
+        }
+ 
+        
+        .frases{
+            display: flex;
+            padding: 5px;
+           width: 95%;
+           align-items: center;
+           margin: 79px;
+        }
+        p{
+            padding: 4px;
+            margin: 3px 38px 11px 33px;
+          
+        }
+    .main-registro{
+        margin: -1px 102px 6px 37px;
+    }
+    .pie {
+        text-align: center;
+        margin: -42px -170px 42px -143px;
+    }
+    }
+    
+
+@media (min-width:1024px){
+    .frases{
+        display: flex;
+        padding: 3px;
+       width: 97%;
+       align-items: center;
+       margin: 26px;
+       justify-content: space-between;
+       margin: 8px 0px 11px -15px;
+
+    }
+    p{
+        padding: 4px;
+        margin: 4px 73px -5px 57px;
+      
+    } 
+    main {
+        margin: 3px 45px 11px -1px;
+    }
+    footer {
+    text-align: center;
+    background-color: #f4eadb;
+    font-size: 17px;
+    padding: 30px 10px;
+}
+footer{
+    margin: 13px 46px 18px -34px;
+
+}
+    .pie{
+        font-size: medium;
+        text-align: center;
+        display: block;
+        margin: 3px 28px 27px -86px;    }
+
+}
 

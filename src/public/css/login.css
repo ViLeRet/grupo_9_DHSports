@@ -1,19 +1,46 @@
-#login-box {
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+.logobarra-mitad{
+   margin:10px;
+}
+    #login-box {
     text-align: center;
     margin: 10px;
     background: #f4eadb;
     padding: 20px 37px;
 }
+.main-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 17px;
+}
+
 .main-login{
     background-color: white;
     padding: 10px;
-    margin: 10px;
+    margin: 10px 27px 22px 13px;
+}
+
+.parrado1{
+    margin: 20px;
+    text-align: center;
 }
 
 #login-box h1 {
     color: #000;
 
 }
+.busqueda1 {
+    position: relative;
+    position: relative;
+    margin: 10px 10px 10px 0px;
+        z-index: 2;
+}
+
 input{
     padding: 0%;
     width: 20%;
@@ -23,12 +50,227 @@ input{
     
     
 }
-button{
-    border-radius: 5px 5px 5px 5px;
-    background-color: bisque;
+
+.input2{
+    padding: 18px;
+    height: 50px;
+    width: 127%;
     border: none;
+    background-color: wheat;
+    border-radius: 5px 5px 5px 5px;
+    margin: 4px 1px 4px -27px;
+  }
+  .input3{
+    padding: 18px;
+    height: 50px;
+    width: 127%;
+    border: none;
+    background-color: wheat;
+    border-radius: 5px 5px 5px 5px;
+    margin: 4px 1px 4px -27px;
+  
+  }
+  .boton2{
+    width: 127%;
+    height: 50px;
+    border: none;
+    background-color:#B2AD74;
+    border-radius: 5px 5px 5px 5px;
+    text-align: center;
+    margin: 4px 1px 4px -27px;
+    justify-content: center;
+    
 }
+i{
+    display: flex;
+    justify-content: end;
+}
+.enviar{
+    color: rgb(136 136 136);
+    text-decoration: none;
+
+}
+
 .logo-login{
-    opacity: 15%;
+    opacity: 6%;
     width: 78%;
 }
+.frases{
+    padding: 5px;
+}
+p{
+    padding: 10px;
+}
+
+@media (min-width: 768px){
+    main {
+        background-color: #B2AD74;
+        margin: 15px 30px -14px 35px;
+        padding: 10px 21px 25px 33px;
+    }
+    .input2{
+      padding: 18px;
+      height: 50px;
+      width: 108%;
+      border: none;
+      background-color: #fff;
+      border-radius: 5px 5px 5px 5px;
+      margin:3px -19px 15px -27px;    
+    }
+    .input3{
+      padding: 18px;
+      height: 50px;
+      width: 108%;
+      border: none;
+      background-color: #fff;
+      border-radius: 5px 5px 5px 5px;
+      margin:3px -19px 15px -27px;    
+    
+    }
+    html{
+        margin:-4px;
+    }
+    .boton2{
+        width: 108%;
+        height: 50px;
+        border: none;
+        background-color:#B2AD74;
+        border-radius: 5px 5px 5px 5px;
+        text-align: center;
+        margin: 5px 98px 11px -25px;
+        justify-content: center;
+        
+      
+  }
+ 
+    .main-login {
+        background-color: white;
+        padding: 10px;
+        margin: 8px 12px 21px 12px;
+}
+
+
+  .frases{
+    display: flex;
+    padding: 5px;
+   width: 101%;
+   align-items: center;
+   margin: 38px;
+   justify-content: space-between;
+}
+p{
+    padding: 4px;
+    margin: 3px 38px 11px 33px;
+  
+}
+}
+
+  @media (min-width: 1024px){
+    .logobarra-mitad{
+        padding: 59px;
+    }
+    main {
+        background-color: #B2AD74;
+        margin: 1px 82px -10px 91px;
+        }
+    
+    .input2{
+      padding: 18px;
+      height: 50px;
+      width: 90%;
+      border: none;
+      background-color: #fff;
+      border-radius: 5px 5px 5px 5px;
+      margin: 2px -19px 15px -27px;
+    }
+    .input3{
+      padding: 18px;
+      height: 50px;
+      width: 90%;
+      border: none;
+      background-color: #fff;
+      border-radius: 5px 5px 5px 5px;
+      margin:3px -19px 15px -27px;    
+    
+    }
+    .boton2{
+        width: 90%;
+        height: 50px;
+        border: none;
+        background-color:#B2AD74;
+        border-radius: 5px 5px 5px 5px;
+        text-align: center;
+        margin: 3px -19px 15px -27px;
+        justify-content: center;
+        
+  }
+  .frases{
+    display: flex;
+    padding: 5px;
+   width: 100%;
+   align-items: center;
+   margin: 38px;
+   justify-content: space-between;
+}
+p{
+    padding: 4px;
+    margin: 4px 73px -5px 57px;
+    
+} 
+}
+
+@media (min-width: 1366px){
+    .logobarra-mitad {
+        padding: 111px 129px 112px 13px;
+    }
+    main {
+        background-color: #B2AD74;
+        margin: -4px 187px 3px 138px;
+        }
+    
+    .input2{
+      padding: 18px;
+      height: 50px;
+      width: 90%;
+      border: none;
+      background-color: #fff;
+      border-radius: 5px 5px 5px 5px;
+      margin: 2px -19px 15px -27px;
+    }
+    .input3{
+      padding: 18px;
+      height: 50px;
+      width: 90%;
+      border: none;
+      background-color: #fff;
+      border-radius: 5px 5px 5px 5px;
+      margin:3px -19px 15px -27px;    
+    
+    }
+    .boton2{
+        width: 90%;
+        height: 50px;
+        border: none;
+        background-color:#B2AD74;
+        border-radius: 5px 5px 5px 5px;
+        text-align: center;
+        margin: 3px -19px 15px -27px;
+        justify-content: center;
+        
+  }
+  .frases{
+    display: flex;
+    padding: 5px;
+   width: 100%;
+   align-items: center;
+   margin: 38px;
+   justify-content: space-between;
+}
+p{
+    padding: 4px;
+    margin: 4px 73px -5px 57px;
+    
+} 
+}
+
+
