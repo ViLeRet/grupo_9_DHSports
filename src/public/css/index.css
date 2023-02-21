@@ -84,8 +84,12 @@ body{
     margin: auto;
     width: 80vw;
     padding: 10px;
-    transition: all 400ms;
+    transition: all 400ms ease;
     border-radius: 10px;
+    overflow: hidden;
+    background: #fff;
+    box-shadow: 0px 1px 10px rgba(0,0,0,0.2);
+    cursor: default;
 }
 .deporte-carrito{
     margin: auto;
@@ -96,14 +100,17 @@ body{
 }
 .deporte:hover{
     transform: scale(1.15,1.15);
-    background-color: blanchedalmond;
+    /*background-color: blanchedalmond;*/
+    box-shadow: 5px 5px 20px rgba(0,0,0,0.4);
+    transform: translateY(-4%);
+
 }
 .deporte-carrito:hover{
     transform: scale(1.15,1.15);
-    background-color: blanchedalmond; 
+    /*background-color: blanchedalmond;*/ 
 }
 .imagenes-deportes{
-    background-color: #f4eadb;
+    /*background-color: #f4eadb;*/
     margin: 20px;
     text-align: center;
     border-radius: 10px;
@@ -121,10 +128,24 @@ body{
 
 .nombre-deporte{
     font-style: 24px;
+    display: inline-block;
+    padding: 10px;
+    margin-top: 10px;
+    color: gray;
+    border: 1px solid gray;
+    border-radius: 4px;
+    transition: all 400ms ease;
+
+}
+
+.nombre-deporte:hover{
+    background: #f4eadb;
+    color: #fff;
 }
 .link-deporte{
     text-decoration: none;
     color: black;
+    
 }
 .precio-total{
     text-align: right;

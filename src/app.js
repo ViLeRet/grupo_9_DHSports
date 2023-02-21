@@ -5,6 +5,8 @@ const mainController = require('./routes/mainRoutes');
 
 const app = express();
 
+app.set('views engine', 'ejs');
+
 const staticPath = path.join(__dirname, 'public');
 app.use(express.static(staticPath));
 
