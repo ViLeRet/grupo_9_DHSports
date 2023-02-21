@@ -100,17 +100,17 @@ body{
 }
 .deporte:hover{
     transform: scale(1.15,1.15);
-    /*background-color: blanchedalmond;*/
+   
     box-shadow: 5px 5px 20px rgba(0,0,0,0.4);
     transform: translateY(-4%);
 
 }
 .deporte-carrito:hover{
     transform: scale(1.15,1.15);
-    /*background-color: blanchedalmond;*/ 
+   
 }
 .imagenes-deportes{
-    /*background-color: #f4eadb;*/
+ 
     margin: 20px;
     text-align: center;
     border-radius: 10px;
