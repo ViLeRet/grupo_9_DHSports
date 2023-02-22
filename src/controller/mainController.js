@@ -2,67 +2,88 @@ const path = require('path');
 
 const controller ={
     index: (req, res) => {
-        res.sendFile(path.join(__dirname, '../views/index.html'));
+        res.render('index');
+       
     },
     login: (req, res)=> {
-        res.sendFile(path.join(__dirname, '../views/login.html'));
+        res.render('login');
+        
     },
     productCar: (req, res)=> {
-        res.sendFile(path.join(__dirname, '../views/productCar.html'));
+        res.render('productCar');
+        
     },
     producDetail: (req, res)=> {
-        res.sendFile(path.join(__dirname, '../views/productDetail.html'));
+        res.render('productDetail');
+        
     },
     productDetail101: (req, res)=> {
-        res.sendFile(path.join(__dirname, '../views/productDetail101.html'));
+        res.render('productDetail101');
+        
     },
     productDetail102: (req, res)=> {
-        res.sendFile(path.join(__dirname, '../views/productDetail102.html'));
+        res.render('productDetail102');
+
     },
     productDetail103: (req, res)=> {
-        res.sendFile(path.join(__dirname, '../views/productDetail103.html'));
+        res.render('productDetail103');
+
     },
     productDetail104: (req, res)=> {
-        res.sendFile(path.join(__dirname, '../views/productDetail104.html'));
+        res.render('productDetail104');
+
     },
     productDetail201: (req, res)=> {
-        res.sendFile(path.join(__dirname, '../views/productDetail201.html'));
+        res.render('productDetail201');
+
     },
     productDetail202: (req, res)=> {
-        res.sendFile(path.join(__dirname, '../views/productDetail202.html'));
+        res.render('productDetail202');
+
     },
     productDetail203: (req, res)=> {
-        res.sendFile(path.join(__dirname, '../views/productDetail203.html'));
+        res.render('productDetail203');
+
     },
     productDetail204: (req, res)=> {
-        res.sendFile(path.join(__dirname, '../views/productDetail204.html'));
+        res.render('productDetail204');
+        
     },
     productDetail301: (req, res)=> {
-        res.sendFile(path.join(__dirname, '../views/productDetail301.html'));
+        res.render('productDetail301');
+
     },
     productDetail302: (req, res)=> {
-        res.sendFile(path.join(__dirname, '../views/productDetail302.html'));
+        res.render('productDetail302');
+
     },
     productDetail303: (req, res)=> {
-        res.sendFile(path.join(__dirname, '../views/productDetail303.html'));
+        res.render('productDetail303');
+
     },
     productDetail304: (req, res)=> {
-        res.sendFile(path.join(__dirname, '../views/productDetail304.html'));
+        res.render('productDetail304');
+
     },
     productDetail401: (req, res)=> {
-        res.sendFile(path.join(__dirname, '../views/productDetail401.html'));
+        res.render('productDetail401');
+
     },
     productDetail402: (req, res)=> {
-        res.sendFile(path.join(__dirname, '../views/productDetail402.html'));
+        res.render('productDetail402');
+
     },
     productDetail403: (req, res)=> {
-        res.sendFile(path.join(__dirname, '../views/productDetail403.html'));
+        res.render('productDetail403');
+
     },
     productDetail404: (req, res)=> {
-        res.sendFile(path.join(__dirname, '../views/productDetail404.html'));
+        res.render('productDetail404');
+
     },
     register: (req, res)=> {
-        res.sendFile(path.join(__dirname, '../views/register.html'));
+        res.render('register');
+        
     }
 };
 

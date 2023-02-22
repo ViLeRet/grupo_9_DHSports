@@ -1,31 +1,43 @@
 const express = require('express');
 const path = require('path');
 
-const mainController = require('./routes/mainRoutes');
+const mainController = require('./routes/main');
+
 
 const app = express();
 
-app.set('views engine', 'ejs');
 
 const staticPath = path.join(__dirname, 'public');
 app.use(express.static(staticPath));
 
+
+app.set('view engine', 'ejs');
+app.set('views', path.join(__dirname, 'views'));
+
+
 app.use('/', mainController);
 app.get('/compras', (req, res) => {
-    res.sendFile(path.join(__dirname, '/views/compras.html'));
+    res.render('compras');
+
+
 });
 app.get('/comprasbasket', (req, res) => {
-    res.sendFile(path.join(__dirname, '/views/comprasbasket.html'));
+    res.render('comprasbasket');
+
+
 });
 app.get('/comprasnatacion', (req, res) => {
-    res.sendFile(path.join(__dirname, '/views/comprasnatacion.html'));
+    res.render('comprasnatacion');
+
+
 });
 app.get('/comprasfutbol', (req, res) => {
-    res.sendFile(path.join(__dirname, '/views/comprasfutbol.html'));
+    res.render('comprasfutbol');
+
 });
 
 
 const port = process.env.PORT || 3500;
-app.listen(port,()=>{
+app.listen(port, () => {
     console.log(`server starter on: http://localhost:${port}`);
 });
