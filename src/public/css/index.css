@@ -95,8 +95,6 @@ body{
     margin: auto;
     width: 80vw;
     padding: 10px;
-    transition: all 400ms;
-    border-radius: 10px;
 }
 .deporte:hover{
     transform: scale(1.15,1.15);
@@ -175,6 +173,8 @@ body{
     }
     .deporte-carrito{
         width: 40%;
+        transition: all 400ms;
+        border-radius: 10px;
     }
     .boton-carrito{
         width: 100%

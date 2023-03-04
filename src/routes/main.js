@@ -8,7 +8,7 @@ router.get('/', mainController.index);
 router.get('/login', mainController.login);
 router.get('/productCar', mainController.productCar);
 router.get('/productDetail', mainController.producDetail);
-router.get('/productDetail101', mainController.productDetail101);
+router.get('/productDetail101/:id', mainController.productDetail101);
 router.get('/productDetail102', mainController.productDetail102);
 router.get('/productDetail103', mainController.productDetail103);
 router.get('/productDetail104', mainController.productDetail104);
