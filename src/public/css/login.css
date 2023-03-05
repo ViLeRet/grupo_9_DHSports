@@ -21,13 +21,13 @@
 
 .main-login{
     background-color: white;
-    padding: 10px;
-    margin: 10px 27px 22px 13px;
+    padding: 20px;
 }
 
 .parrado1{
-    margin: 20px;
+    margin: 10px;
     text-align: center;
+    padding: 10px;
 }
 
 #login-box h1 {
@@ -52,32 +52,32 @@ input{
 }
 
 .input2{
-    padding: 18px;
+    padding: 10px;
     height: 50px;
-    width: 127%;
+    width: 90%;
     border: none;
     background-color: wheat;
     border-radius: 5px 5px 5px 5px;
-    margin: 4px 1px 4px -27px;
+    margin: 10px;
   }
   .input3{
-    padding: 18px;
+    padding: 10px;
     height: 50px;
-    width: 127%;
+    width: 90%;
     border: none;
     background-color: wheat;
     border-radius: 5px 5px 5px 5px;
-    margin: 4px 1px 4px -27px;
+    margin: 10px;
   
   }
   .boton2{
-    width: 127%;
+    width: 90%;
     height: 50px;
     border: none;
     background-color:#B2AD74;
-    border-radius: 5px 5px 5px 5px;
+    border-radius: 5px;
     text-align: center;
-    margin: 4px 1px 4px -27px;
+    margin: auto;
     justify-content: center;
     
 }
@@ -105,39 +105,38 @@ p{
 @media (min-width: 768px){
     main {
         background-color: #B2AD74;
-        margin: 15px 30px -14px 35px;
-        padding: 10px 21px 25px 33px;
+        padding: 15px 30px -14px 35px;
     }
     .input2{
-      padding: 18px;
+      padding: 10px;
       height: 50px;
-      width: 108%;
+      width: 95%;
       border: none;
       background-color: #fff;
-      border-radius: 5px 5px 5px 5px;
-      margin:3px -19px 15px -27px;    
+      border-radius: 5px;
+      margin: 10px    
     }
     .input3{
-      padding: 18px;
+      padding: 10px;
       height: 50px;
-      width: 108%;
+      width: 95%;
       border: none;
       background-color: #fff;
-      border-radius: 5px 5px 5px 5px;
-      margin:3px -19px 15px -27px;    
+      border-radius: 5px;
+      margin:10px;    
     
     }
     html{
         margin:-4px;
     }
     .boton2{
-        width: 108%;
+        width: 95%;
         height: 50px;
         border: none;
         background-color:#B2AD74;
-        border-radius: 5px 5px 5px 5px;
+        border-radius: 5px;
         text-align: center;
-        margin: 5px 98px 11px -25px;
+        margin: 10px;
         justify-content: center;
         
       
@@ -171,7 +170,7 @@ p{
     }
     main {
         background-color: #B2AD74;
-        margin: 1px 82px -10px 91px;
+        padding: 1px 82px -10px 91px;
         }
     
     .input2{
@@ -218,59 +217,3 @@ p{
     
 } 
 }
-
-@media (min-width: 1366px){
-    .logobarra-mitad {
-        padding: 111px 129px 112px 13px;
-    }
-    main {
-        background-color: #B2AD74;
-        margin: -4px 187px 3px 138px;
-        }
-    
-    .input2{
-      padding: 18px;
-      height: 50px;
-      width: 90%;
-      border: none;
-      background-color: #fff;
-      border-radius: 5px 5px 5px 5px;
-      margin: 2px -19px 15px -27px;
-    }
-    .input3{
-      padding: 18px;
-      height: 50px;
-      width: 90%;
-      border: none;
-      background-color: #fff;
-      border-radius: 5px 5px 5px 5px;
-      margin:3px -19px 15px -27px;    
-    
-    }
-    .boton2{
-        width: 90%;
-        height: 50px;
-        border: none;
-        background-color:#B2AD74;
-        border-radius: 5px 5px 5px 5px;
-        text-align: center;
-        margin: 3px -19px 15px -27px;
-        justify-content: center;
-        
-  }
-  .frases{
-    display: flex;
-    padding: 5px;
-   width: 100%;
-   align-items: center;
-   margin: 38px;
-   justify-content: space-between;
-}
-p{
-    padding: 4px;
-    margin: 4px 73px -5px 57px;
-    
-} 
-}
-
-
