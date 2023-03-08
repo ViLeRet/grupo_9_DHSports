@@ -22,15 +22,17 @@
 
                 <div class="lista-imagenes">
 
-                    <img class="imagen-grande101" src= <%= product.img1 %> alt= <%= product.altimg %> >
+                    <img class="imagen-grande101" src= <%= product.images[0] %> alt= <%= product.altimg %> >
 
-                    <div class="imagenes-flex">
+                    <div class="imagenes-flex"> 
+                        <% for (let index = 1; index < product.images.length; index++) {
+                            const element = product.images[index];%>
+                            
+                            <img class="imagenes-pequeñas101" src="<%= element %>" alt="imagen del Producto"<%= index %>>
+                      <%  } %>
 
-                    <img class="imagenes-pequeñas101" src= <%= product.img2 %> alt=<%= product.altimg %>>
 
-                    <img class="imagenes-pequeñas101" src= <%= product.img3 %> alt=<%= product.altimg %>>
-
-                    <img class="imagenes-pequeñas101" src= <%= product.img4 %> alt=<%= product.altimg %>>
+                    
 
                     </div>
 

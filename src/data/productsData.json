@@ -1,0 +1,146 @@
+[
+    {
+        "id": 1,
+        "categoria": "Running",
+        "titulo":"Tenis running kalenji run 100 mujer gris",
+        "descripcion": "Nuestros equipos de diseño han desarrollado estos tenis de running para mujer, livianos y con amortiguación, para correr hasta 10 km a la semana",
+        "images":["/images/running-1-01.avif","/images/running-1-01.avif","/images/running-1-01.avif"],
+        "altimg": "Tenis mujer",
+        "precio": 2.003
+    },
+    {
+        "id": 2,
+        "categoria": "Running",
+        "titulo":"Medias gruesas de running run900 strap negro azul",
+        "descripcion": "Nuestros equipos de diseño han desarrollado estas medias de running para sujetar mejor el tobillo durante las salidas de running.",
+        "images": [],
+        "altimg": "Medias",
+        "precio": 2.445
+    },
+    {
+        "id": 3,
+        "categoria": "Running",
+        "titulo":"Pantaloneta transpirable hombre running dry negro",
+        "descripcion": "Nuestro equipo ha diseñado esta pantaloneta de running para hombre, imprescindible para correr de forma ligera en clima cálido.",
+        "images": [],
+        "altimg": "Pantaloneta",
+        "precio": 1.617
+    },
+    {
+        "id": 4,
+        "categoria": "Running",
+        "titulo":"Tenis caminar ciudad hombre soft 140 mesh negro blanco",
+        "descripcion": "Comodidad esencial para las salidas por zonas urbanas.",
+        "images": [],
+        "altimg": "Tenis hombre",
+        "precio": "3.905"
+    },
+    {
+        "id": 5,
+        "categoria": "Fútbol",
+        "titulo":"Balón de fútbol híbrido talla 5 fifa basic f500 nieve y niebla rojo",
+        "descripcion": "Homologado por la FIFA para entrenamientos y competencias hemos desarrollado el F500 Híbrido, un balón que combina comodidad de uso y resistencia.",
+        "images": [],
+        "altimg": "Balón de fútbol",
+        "precio": "2.840"
+    },
+    {
+        "id": 6,
+        "categoria": "Fútbol",
+        "titulo":"Guayos kipsta agility 100 terreno firme adulto",
+        "descripcion": "Diseñamos los guayos Agility 100 flexibles para futbolistas que juegan en terrenos secos, 1 ves a la semana.",
+        "images": [],
+        "altimg": "Guayos",
+        "precio": "2.718"
+    },
+    {
+        "id": 7,
+        "categoria": "Fútbol",
+        "titulo":"Medias de fútbol adulto f100 blanco",
+        "descripcion": "Nuestros diseñadores futbolistas desarrollaron estas medias de fútbol F100 para jugar fútbol una vez a la semana.",
+        "images": [],
+        "altimg": "Medias de fútbol",
+        "precio": "986"
+    },
+    {
+        "id": 8,
+        "categoria": "Fútbol",
+        "titulo":"Cancha de fútbol kipsta portería l talla s blanco",
+        "descripcion": "Nuestros equipos de diseño crearon esta portería de tamaño reducido, ideal para resistir a partidos de fútbol entre pequeños y grandes.",
+        "images": [],
+        "altimg": "Portería",
+        "precio": "6.824"
+    },
+    {
+        "id": 9,
+        "categoria": "Baloncesto",
+        "titulo":"Balón de baloncesto talla 7 tarmak bt100 marrón avellana",
+        "descripcion": "Balón de baloncesto de talla 7 oficial, adecuado para jugar al baloncesto en exterior y/o en interior, para niños y hombres a partir de 13 años.",
+        "images": [],
+        "altimg": "Balón de baloncesto",
+        "precio": "3.866"
+    },
+    {
+        "id": 10,
+        "categoria": "Baloncesto",
+        "titulo":"Camiseta esqueleto doble faz unisex de baloncesto t500r buzzer gris negro",
+        "descripcion": "Nuestros equipos de diseño TARMAK han desarrollado esta camiseta esqueleto doble faz para calentamientos y entrenamientos de jugadores en perfeccionamiento.",
+        "images": [],
+        "altimg": "Camiseta",
+        "precio": "4.665"
+    },
+    {
+        "id": 11,
+        "categoria": "Baloncesto",
+        "titulo":"Pantaloneta doble faz unisex de baloncesto sh500r gris negro",
+        "descripcion": "Nuestros equipos de diseño TARMAK han desarrollado esta pantaloneta doble faz para calentamientos y entrenamientos de los jugadores de nivel perfeccionamiento.",
+        "images": [],
+        "altimg": "Pantaloneta",
+        "precio": "4655"
+    },
+    {
+        "id": 12,
+        "categoria": "Baloncesto",
+        "titulo":"Tenis unisex de baloncesto caña baja fast 500 blanco negro",
+        "descripcion": "Estos tenis han sido diseñados para jugadores nivel perfeccionamiento que suelen practicar un juego basado en aceleraciones y cambios rápidos de dirección.",
+        "images": [],
+        "altimg": "Tenis unisex",
+        "precio": "13.334"
+    },
+    {
+        "id": 13,
+        "categoria": "Natación",
+        "titulo":"Gafas natación xbase lentes claros talla l negro",
+        "descripcion": "Diseñamos estas gafas de piscina para los nadadores principiantes que quieren iniciarse en el deporte.",
+        "images": [],
+        "altimg": "Gafas de natación",
+        "precio": "986"
+    },
+    {
+        "id": 14,
+        "categoria": "Natación",
+        "titulo":"Vestido de baño tipo bóxer natación 100 basic hombre gris",
+        "descripcion": "Nuestros equipos de diseño han creado este vestido de baño para hombres que deseen iniciar en la práctica de la natación.",
+        "images": [],
+        "altimg": "Vestido de baño hombre",
+        "precio": "1.025"
+    },
+    {
+        "id": 15,
+        "categoria": "Natación",
+        "titulo":"Vestido de baño enterizo resistente cloro natación kamiye imo mujer negro",
+        "descripcion": "Nuestros equipos de diseño han creado este vestido de baño enterizo para la nadadora en perfeccionamiento que nada frecuentemente para progresar en natación.",
+        "images": [],
+        "altimg": "Vestido de baño mujer",
+        "precio": "6.785"
+    },
+    {
+        "id": 16,
+        "categoria": "Natación",
+        "titulo":"Chanclas piscina slap 500 hombre blanco azul",
+        "descripcion": "Diseñadas para los nadadores que buscan unas chanclas cómodas para evitar resbalar al borde de la piscina.",
+        "images":"" ,
+        "altimg": "Chanclas",
+        "precio": "2.761"
+    }
+]
