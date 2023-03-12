@@ -215,6 +215,9 @@ const controller ={
     register: (req, res)=> {
         res.render('register');
         
+    },
+    nuevoProducto: (req, res) => {
+        res.render('nuevoProducto')
     }
 };
 

@@ -35,6 +35,9 @@ app.get('/comprasfutbol', (req, res) => {
     res.render('comprasfutbol');
 
 });
+app.get('/nuevoProducto', (req, res) => { //ruta nuevo producto//
+    res.render('nuevoProducto');
+});
 
 
 const port = process.env.PORT || 3500;

@@ -1,0 +1,96 @@
+.formulario-container{
+    margin: 20px;
+    font-size: 17px;
+    font-family: sans-serif;
+}
+.titulo-container{
+    font-size: 20px;
+    font-weight: 600;
+    text-align: center;
+}
+.formulario-nuevo-producto{
+    display: flex;
+    flex-direction: column;   
+    gap: 20px;
+}
+.name-produc{
+    display: flex;
+    flex-direction: column;
+}
+.marca-container{
+    display: flex;
+    flex-direction: column;
+}
+.categoria-container{
+    display: flex;
+    flex-direction: column;
+}
+.img-container{
+    display: flex;
+    flex-direction: column;
+}
+.descripcion-container{
+    display: flex;
+    flex-direction: column;
+}
+.size-container{
+    display: flex;
+    flex-direction: column;
+}
+.color-container{
+    display: flex;
+    flex-direction: column;
+}
+.valor-container{
+    display: flex;
+    flex-direction: column;
+}
+.btn{
+    display: flex;
+}
+input{
+    font-size: 17px;
+    height: 30px;
+    border-radius: 6px;
+}
+.img-producto{
+    font-size: 17px;
+    height: 25px;
+    background-color: aliceblue;
+}
+#descripcionproducto{
+    border-radius: 6px;
+    font-size: 17px;
+
+}
+
+.marcas, .categorias, #talle, #color{
+    font-size: 17px;
+    height: 30px;
+    border-radius: 6px;
+}
+.btn{
+    justify-content: center;
+    align-items: center;
+}
+.btn-save{
+    padding: 10px;
+    width: 150px;
+    font-size: 17px;
+    font-weight: 600;
+    background-color: #625d2a;
+    color: aliceblue;
+    border-radius: 10px;
+}
+
+@media(min-width: 992px) {
+    .formulario-container{
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .formulario-nuevo-producto{
+        width: 60%;
+    }
+}
