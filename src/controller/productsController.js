@@ -12,53 +12,58 @@ const controller = {
 		const products = getProducts();
 		res.render('products', { products });
 	},
+	productDetail: (req, res)=> {
+		const products = getProducts();
 
+        res.render('productDetail',{products})
+    },
 	detail: (req, res) => {
 		const { id } = req.params;
 		const products = getProducts();
 		const product = products.find((element) => element.id === +id);
-		res.render('detail', { product });
+		res.render('productDetail', { product });
 	},
 
 	create: (req, res) => {
-		res.render('product-create-form');
+		res.render('nuevoProducto');
 	},
 
 	store: (req, res) => {
-		const image = req.file ? req.file.filename : 'default-image.png';
+		const images = req.file ? req.file.filename : 'default-image.png';
 		const products = getProducts();
 		const newProduct = {
 			id: products[products.length - 1].id + 1,
-			name: req.body.name,
-			price: req.body.price,
-			discount: req.body.discount,
-			category: req.body.category,
-			description: req.body.description,
-			image
+			titulo: req.body.titulo,
+			categoria: req.body.cattegoria,
+			precio: req.body.precio,
+			descripcion: req.body.descripcion,
+			altimg: req.body.altimg,
+			images
 		};
 		products.push(newProduct);
-		fs.writeFileSync(productsFilePath, JSON.stringify(products, null, 2));
+		fs.writeFileSync(productsFilePath, JSON.stringify(products, null, ' '));
 		res.redirect('/products');
 	},
 
 	edit: (req, res) => {
 		const products = getProducts();
 		const product = products.find(element => element.id == req.params.id);
-		res.render('product-edit-form', { productToEdit: product });
+		res.render('nuevoProducto', { productToEdit: product });
 	},
 	update: (req, res) => {
 		const products = getProducts();
 		const productIndex = products.findIndex(element => element.id == req.params.id);
-		const image = req.file ? req.file.filename : products[productIndex].image;
+		const image = req.file ? req.file.filename : products[productIndex].images;
 		products[productIndex] = {
 			...products[productIndex],
-			name: req.body.name,
-			price: req.body.price,
-			discount: req.body.discount,
-			category: req.body.category,
-			description: req.body.description,
-			image
-		};
+			precio: req.body.precio,
+			categoria: req.body.categoria,
+			images : image,
+			descripcion: req.body.descripcion,
+			altimg: req.body.altimg,
+
+			
+		}
 		fs.writeFileSync(productsFilePath, JSON.stringify(products, null, 2));
 		res.redirect('/products');
 	},

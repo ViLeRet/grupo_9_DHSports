@@ -1,8 +1,9 @@
 const express = require('express');
 const path = require('path');
+const methodOverride =  require('method-override');
 
 const mainController = require('./routes/main');
-
+const productRouter= require('./routes/products')
 
 const app = express();
 
@@ -10,12 +11,16 @@ const app = express();
 const staticPath = path.join(__dirname, 'public');
 app.use(express.static(staticPath));
 
+app.use(express.urlencoded({ extended: false }));
+app.use(express.json());
+app.use(methodOverride('_method'));
 
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
 
 
 app.use('/', mainController);
+app.use(productRouter)
 app.get('/compras', (req, res) => {
     res.render('compras');
 
