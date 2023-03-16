@@ -6,7 +6,7 @@ const router = express.Router();
 
 const storage = multer.diskStorage({
     destination: (req, file, cb) => {
-        cb(null, path.resolve(__dirname, '../../public/images'));
+        cb(null, path.resolve(__dirname, '../public/images'));
     },
     filename: (req, file, cb) => {
         cb(null, Date.now() + '-' + file.originalname);
@@ -22,6 +22,8 @@ router.get('/', productsController.index);
 router.get('/create', productsController.create);
 router.post('/', upload.single('image'), productsController.store);
 
+
+router.get('/productDetail', productsController.productDetail)
 router.get('/productDetail/:id', productsController.detail);
 
 router.get('/edit/:id', productsController.edit); 

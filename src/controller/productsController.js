@@ -9,13 +9,13 @@ function getProducts() {
 
 const controller = {
 	index: (req, res) => {
-		const products = getProducts();
-		res.render('products', { products });
+		const product = getProducts();
+		res.render('product', { product });
 	},
 	productDetail: (req, res)=> {
-		const products = getProducts();
+		const product = getProducts();
 
-        res.render('productDetail',{products})
+        res.render('productDetail',{product})
     },
 	detail: (req, res) => {
 		const { id } = req.params;
@@ -34,15 +34,17 @@ const controller = {
 		const newProduct = {
 			id: products[products.length - 1].id + 1,
 			titulo: req.body.titulo,
-			categoria: req.body.cattegoria,
+			categoria: req.body.categoria,
 			precio: req.body.precio,
+			marca: req.body.marca,
+			talle: req.body.talle,
+			color: req.body.color,
 			descripcion: req.body.descripcion,
-			altimg: req.body.altimg,
 			images
 		};
 		products.push(newProduct);
 		fs.writeFileSync(productsFilePath, JSON.stringify(products, null, ' '));
-		res.redirect('/products');
+		res.redirect('/nuevoProducto');
 	},
 
 	edit: (req, res) => {

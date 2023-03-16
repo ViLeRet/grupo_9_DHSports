@@ -7,14 +7,20 @@
         <%- include('partials/header') %>
             <main>
 
-                <form class="formulario-container"   method="POST" action="/productsData/:id/editar?_method=PUT">
+                <form class="formulario-container"   method="POST" action="/" >
+                   
 
                     <p class="titulo-container">Nuevo producto</p>
                     
                     <div class="formulario-nuevo-producto">
+                        <div>
+                            <label class="titulo">Titulo</label>
+                            <input type="text" name="titulo" id="titulo" placeholder="Detalle del producto">
+
+                        </div>
 
                         <div class="name-produc">
-                            <label class="nombreproducto">Nombre del producto</label>
+                            <label class="nombreproducto">Tipo de artículo</label>
                             <input type="text" name="nombreproducto" id="nombreproducto" placeholder="Ej: Zapatillas">
 
                         </div>
@@ -22,7 +28,7 @@
                         <div class="marca-container">
 
                             <label class="marca">Seleccionar marca</label>
-                            <select class="marcas" name="marcas">
+                            <select class="marcas" name="marca">
                                 <option value="0">Seleccione una marca</option>
                                 <option value="1">Adidas</option>
                                 <option value="2">Nike</option>
@@ -37,7 +43,7 @@
                         <div class="categoria-container">
 
                             <label class="categoria">Categoria</label>
-                            <select class="categorias" name="categorias">
+                            <select class="categorias" name="categoria">
                                 <option value="0">Seleccione una categoria</option>
                                 <option value="0">Futbol</option>
                                 <option value="0">Running</option>
@@ -48,16 +54,16 @@
 
                         <div class="img-container">
 
-                            <label class="img">Imagenes del producto</label>
-                            <input class="img-producto" type="file" name="imagenproducto" id="imagenproducto"
+                            <label class="img"> Subir imagen del artículo </label>
+                            <input class="img-producto" type="file" name="images" id="imagenproducto"
                                 accept="jpg, jpeg" multiple>
 
                         </div>
 
                         <div class="descripcion-container">
 
-                            <label class="descripcionDeProducto">Descripcion general del producto</label>
-                            <textarea name="descripcionproducto" id="descripcionproducto" cols="30"
+                            <label class="descripcionDeProducto">Descripcion </label>
+                            <textarea name="descripcion" id="descripcion" cols="30"
                                 rows="10"></textarea>
                         </div>
 
@@ -87,7 +93,7 @@
 
                         <div class="color-container">
 
-                            <label class="color-producto">Color del producto</label>
+                            <label class="color-producto">Color </label>
                             <select name="color" id="color">
                                 <option value="rojo">Rojo</option>
                                 <option value="negro">Negro</option>
@@ -101,14 +107,16 @@
 
                         <div class="valor-container">
 
-                            <label class="valor-producto">Valor del producto</label>
-                            <input type="number" name="valor" id="valor" placeholder="$">
+                            <label class="valor-producto">Valor/precio</label>
+                            <input type="number" name="precio" id="valor" placeholder="$">
 
                         </div>
+
 
                         <div class="btn">
-                            <button type="button" class="btn-save"><i class="fa-regular fa-floppy-disk"></i> Guardar</button>
+                            <button type="submit" class="btn-save"><i class="fa-regular fa-floppy-disk"></i> Guardar</button>
                         </div>
+
 
 
                     </div>

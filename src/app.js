@@ -3,7 +3,8 @@ const path = require('path');
 const methodOverride =  require('method-override');
 
 const mainController = require('./routes/main');
-const productRouter= require('./routes/products')
+const productsController = require('./controller/productsController');
+const productRouter= require('./routes/products');
 
 const app = express();
 
@@ -40,9 +41,8 @@ app.get('/comprasfutbol', (req, res) => {
     res.render('comprasfutbol');
 
 });
-app.get('/nuevoProducto', (req, res) => { //ruta nuevo producto//
-    res.render('nuevoProducto');
-});
+
+app.get('/nuevoProducto', productsController.create)
 
 
 const port = process.env.PORT || 3500;
