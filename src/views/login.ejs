@@ -29,7 +29,7 @@
 
         <div class="main-login">
 
-        <form action="#" method="POST">
+        <form  method="POST" action="/user/login" enctype="multipart/form-data">
 
             <div id="login-box">
             
@@ -40,14 +40,33 @@
                     <div class="item">
 
                         <i class="fa-solid fa-user"></i>
-                        <input type="text" placeholder="Usuario" name="username" class="input2" > 
+                        <input 
+                        type="text" 
+                        placeholder="Usuario" 
+                        name="userName" 
+                        class="input2 <% locals.errors && errors.userName ? 'is-invalid' : null %>" 
+                        value="<% locals.oldData ? oldData.userName : null %>"> 
+                        <% if (locals.errors && errors.userName) { %>
+                         <div class="text-danger">
+                            <% errors.userName.msg %>
+                         </div>
+                        <% } %>
 
                     </div>
                 
                     <div class="item">
 
                         <i class="fa-solid fa-lock"></i>  
-                        <input type="password" placeholder="Contraseña" name="password" class="input3">
+                        <input 
+                        type="password" 
+                        placeholder="Contraseña" 
+                        name="password" 
+                        class="input3 <% locals.errors && errors.password ? 'is-invalid' : null %>">
+                        <% if (locals.errors && errors.password) { %>
+                         <div class="text-danger">
+                            <% errors.password.msg %>
+                         </div>
+                        <% } %>
 
                     </div>
                 
@@ -55,10 +74,10 @@
             
                 <div>
 
-                    <p class="parrado1">olvidaste la contraseña</p>
+                    <!-- <p class="parrado1">olvidaste la contraseña</p> -->
                 </div>
 
-                <button class="boton2"><a class="enviar" href="/">ingresar</a></button>
+                <button type="submit" class="boton2"><a class="enviar">Ingresar</a></button>
 
             </div>
 
