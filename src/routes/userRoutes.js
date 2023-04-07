@@ -2,7 +2,9 @@ const express = require('express');
 const router = express.Router();
 const path = require('path');
 const multer = require('multer');
-const usersController = require('../controller/usersController');
+
+const authMiddleware = require('../middlewares/authMiddleware');
+const guestMiddleware = require('../middlewares/guestMiddleware');
 
 const { body, check } = require('express-validator');
 
@@ -17,6 +19,8 @@ const storage = multer.diskStorage({
 })
 
 const uploadFile = multer({ storage });
+
+const usersController = require('../controller/usersController');
 
 const validations = [
     body('name').notEmpty().withMessage('Tienes que escribir un nombre'),
@@ -42,17 +46,17 @@ const validations = [
 ]
 
 //Formulario de registro
-router.get('/register', usersController.register);
+router.get('/register', guestMiddleware,usersController.register);
 
 //Procesamiento del registro
 router.post('/register',uploadFile.single('avatar'), validations, usersController.processRegister);
 
 //Formulario de Login
-router.get('/login', usersController.login);
+router.get('/login',guestMiddleware, usersController.login);
 
 //Procesamiento de Login
 router.post('/login', [
-    check('userName').isEmail().withMessage('Email invalido'),
+    check('email').isEmail().withMessage('Email invalido'),
     check('password').isLength({ min: 8 }).withMessage('La contraseña debe tener al menos 8 caracteres')
     ],usersController.processLogin);
 
