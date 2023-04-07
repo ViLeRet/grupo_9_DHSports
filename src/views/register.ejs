@@ -1,125 +1,184 @@
 <!DOCTYPE html>
 <html lang="en">
-<%- include('partials/head')  %>
-<body>
+<%- include('partials/head') %>
 
-<%- include('partials/header')  %>   
+    <body>
 
-    <main>
+        <%- include('partials/header') %>
 
-        <div class="main-registro">
+            <main>
 
-            <h2 class="new-account">Creá tu cuenta</h2>
-        
-            <section class="formulario-content">
-            
-                <form action="/register" class="formulario" method="post"></form>
+                <div class="main-registro">
 
-                <!-- Grupo: Usuario -->
-                    <div class="formulario-grupo" id="grupo-usuario">
-                        <label for="usuario" class="formulario-label">Usuario</label>
+                    <h2 class="new-account">Creá tu cuenta</h2>
 
-                        <div class="formulario-grupo-input">
-                            <input type="text" class="formulario-input" name="usuario" id="usuario" placeholder="Dh154">
-                            <i class="formulario__validacion-estado fas fa-times-circle"></i>
-                            <p class="input-error">El usuario debe contener de 4 a 10 caracteres. Pueden ser letras, números y guiones.</p>
+
+
+                    <form action="/user/register" class="formulario-content" method="POST"
+                        enctype="multipart/form-data">
+
+                        <!-- Grupo: Email de usuario -->
+                        <div class="formulario-grupo" id="grupo-usuario">
+                            <label for="usuario" class="formulario-label">Email</label>
+
+                            <div class="formulario-grupo-input">
+                                <input type="email"
+                                    class="formulario-input <%= locals.errors && errors.email ? 'is-invalid' : null %>"
+                                    value="<%= locals.oldData ? oldData.email : null %>" name="email" id="usuario"
+                                    placeholder="example@email.com">
+                                    <% if(locals.errors && errors.email) {%>
+                                        <div class="text-danger">
+                                            <%= errors.email.msg %>
+                                        </div>
+                                        <% } %>
+                                <i class="formulario__validacion-estado fas fa-times-circle"></i>
+
+                            </div>
+
                         </div>
 
-                    </div>
+                        <!-- Grupo: Nombre -->
+                        <div class="formulario-grupo" id="grupo-nombre">
+                            <label for="nombre" class="formulario-label">Nombre</label>
 
-                <!-- Grupo: Nombre -->
-                    <div class="formulario-grupo" id="grupo-nombre">
-                        <label for="nombre" class="formulario-label">Nombre</label>
-    
-                        <div class="formulario-grupo-input">
-                            <input type="text" class="formulario-input" name="nombre" id="nombre" placeholder="DH SPORTS">
-                            <i class="formulario__validacion-estado fas fa-times-circle"></i>
-                            <p class="input-error">El usuario debe contener de 4 a 10 caracteres. Pueden ser letras, números y guiones.</p>
+                            <div class="formulario-grupo-input">
+                                <input type="text"
+                                    class="formulario-input <%= locals.errors && errors.name ? 'is-invalid' : null %>"
+                                    value="<%= locals.oldData ? oldData.fullName : null %>" name="name" id="nombre"
+                                    placeholder="DH SPORTS">
+                                <% if(locals.errors && errors.name) {%>
+                                    <div class="text-danger">
+                                        <%= errors.name.msg %>
+                                    </div>
+                                    <% } %>
+                                        <i class="formulario__validacion-estado fas fa-times-circle"></i>
+
+                            </div>
+
                         </div>
-    
-                    </div>
-     
-                <!-- Grupo: Contraseña -->
-                    <div class="formulario-grupo" id="grupo-contraseña">
-                        <label for="contraseña" class="formulario-label">Contraseña</label>
-    
-                        <div class="formulario-grupo-input">
-                            <input type="password" class="formulario-input" name="contraseña" id="contraseña" placeholder="">
-                            <i class="formulario__validacion-estado fas fa-times-circle"></i>
-                            <p class="input-error">La contraseña debe contener de 4 a 10 caracteres.</p>
+
+                        <!-- Grupo: Contraseña -->
+                        <div class="formulario-grupo" id="grupo-contraseña">
+                            <label for="contraseña" class="formulario-label ">Contraseña</label>
+
+                            <div class="formulario-grupo-input">
+                                <input type="password"
+                                    class="formulario-input <%= locals.errors && errors.password ? 'is-invalid' : null %>"
+                                    name="password" id="contraseña">
+                                    <% if(locals.errors && errors.password) {%>
+                                        <div class="text-danger">
+                                            <%= errors.password.msg %>
+                                        </div>
+                                        <% } %>
+                                <i class="formulario__validacion-estado fas fa-times-circle"></i>
+
+                            </div>
+
                         </div>
-    
-                    </div>
 
-                <!-- Grupo: Contraseña 2 -->
-                    <div class="formulario-grupo" id="grupo-contraseña2">
-                        <label for="contraseña2" class="formulario-label">Repetir contraseña</label>
-    
-                        <div class="formulario-grupo-input">
-                            <input type="password" class="formulario-input" name="contraseña2" id="contraseña2" placeholder="">
-                            <i class="formulario__validacion-estado fas fa-times-circle"></i>
-                            <p class="input-error">Ambas contraseñas deben de ser iguales.</p>
+                        <!-- Grupo: Contraseña 2 -->
+                        <div class="formulario-grupo" id="grupo-contraseña2">
+                            <label for="contraseña2" class="formulario-label">Repetir contraseña</label>
+
+                            <div class="formulario-grupo-input">
+                                <input type="password" class="formulario-input" name="password" id="contraseña2"
+                                    >
+                                <i class="formulario__validacion-estado fas fa-times-circle"></i>
+
+                            </div>
+
                         </div>
-    
-                    </div>    
-                 
-                <!-- Grupo: Correo electronico -->
-                    <div class="formulario-grupo" id="grupo-correo">
-                        <label for="correo" class="formulario-label">Correo electronico</label>
-    
-                        <div class="formulario-grupo-input">
-                            <input type="email" class="formulario-input" name="correo" id="correo" placeholder="dhs@correo.com">
-                            <i class="formulario__validacion-estado fas fa-times-circle"></i>
-                            <p class="input-error">El correo solo puede contener letras, números, puntos, guiones y guione bajos.</p>
+
+                        <!-- Grupo: Pais de nacimiento -->
+                        <div class="formulario-grupo" id="grupo-correo">
+
+                            <label for="" class="formulario-label">Pais de nacimiento:</label>
+
+
+
+                            <div class="formulario-grupo-input">
+
+                                <select name="country"
+                                    class="formulario-input <%= locals.errors && errors.country ? 'is-invalid' : null %>"
+                                    value="<%= locals.oldData ? oldData.country : null %>">
+
+
+                                    <option value="">Elegi un pais</option>
+                                    <% let countries=['Argentina', 'Bolivia' , 'Brasil' , 'Colombia' , 'Chile'
+                                        , 'Ecuador' , 'Paraguay' , 'Peru' , 'Uruguay' , 'Venezuela' ]; %>
+                                        <% for (const oneCountry of countries) { %>
+                                            <option value="<%= oneCountry %>" <%=locals.oldData &&
+                                                (oneCountry==oldData.country) ? 'selected' : null %>
+                                                >
+                                                <%= oneCountry %>
+                                            </option>
+                                            <%}%>
+
+                                                %>
+                                </select>
+                                <% if(locals.errors && errors.country) {%>
+                                    <div class="text-danger">
+                                        <%= errors.country.msg %>
+                                    </div>
+                                    <% } %>
+                                <i class="formulario__validacion-estado fas fa-times-circle"></i>
+
+                            </div>
+
                         </div>
-    
-                    </div>
 
-                <!-- Grupo:Telefono-->
-                    <div class="formulario-grupo" id="grupo-telefono">
-                        <label for="telefono" class="formulario-label">Teléfono</label>
-        
-                        <div class="formulario-grupo-input">
-                            <input type="tel" class="formulario-input" name="telefono" id="telefono" placeholder="4468247800">
-                            <i class="formulario__validacion-estado fas fa-times-circle"></i>
-                            <p class="input-error">El teléfono solo puede contener números y un máximo de 10 caracteres.</p>
+                        <!-- Grupo:Imagen de perfil-->
+                        <div class="formulario-grupo" id="grupo-telefono">
+                            <label for="telefono" class="formulario-label" name="avatar">Imagen de Perfil</label>
+
+                            <div class="formulario-grupo-input">
+                                <input type="file" class="formulario-input" name="avatar"
+                                    value="<%= locals.oldData ? oldData.file : null %>">
+                                <i class="formulario__validacion-estado fas fa-times-circle"></i>
+                                <% if(locals.errors && errors.avatar) {%>
+                                    <div class="text-danger">
+                                        <%= errors.avatar.msg %>
+                                    </div>
+                                    <% } %>
+                            </div>
+
                         </div>
-        
-                    </div>
 
-                <!-- Grupo: terminos y condiciones -->
-                    <div class="formulario-grupo" id="grupo-terminos">
-                        <label class="fotmulario-label">
-                            <input class="formulario-checkbox" type="checkbox" name="terminos" id="terminos">
-                            Acepto los terminos y condiciones
-                        </label>
-                    </div>
+                        <!-- Grupo: terminos y condiciones -->
+                        <div class="formulario-grupo" id="grupo-terminos">
+                            <form action="" method="POST">
+                                <label class="fotmulario-label">
+                                    <input class="formulario-checkbox" type="checkbox" name="terminos" id="terminos">
+                                    Acepto los terminos y condiciones
+                                </label>
+                        </div>
 
-                    <div class="formulario-mensaje" id="formulario-mensaje">
-                        <p><i class="fa-solid fa-triangle-exclamation"></i> <b>Error:</b> Por favor rellene el formulario correctamente.</p>
-                    </div>
+                        <div class="formulario-mensaje" id="formulario-mensaje">
+                            <p><i class="fa-solid fa-triangle-exclamation"></i>
+                        </div>
 
-                    <div class="formulario-grupo formulario-grupo-btn-enviar">
-                        <button type="submit" class="formulario-btn">Enviar</button>
-                        <p class="mensaje-exito" id="mensaje-exito">El formulario fue enviado exitosamente</p>
-                    </div>
+                        <div class="formulario-grupo formulario-grupo-btn-enviar">
+                            <button type="submit" class="formulario-btn">Registrarse</button>
 
-            </section>
+                        </div>
 
-        </div>
 
-    </main>
-    
-    <%- include('partials/footer') %>
+                </div>
 
-<div class="pie">
+            </main>
 
-<h3>© 2023 DH™ Sports.</h3>
+            <%- include('partials/footer') %>
 
-<p>Los mejores productos para el deporte</p>
+                <div class="pie">
 
-<p>ecommerce.dh@sports.com</p>
-</div>
-    
-</body>
+                    <h3>© 2023 DH™ Sports.</h3>
+
+                    <p>Los mejores productos para el deporte</p>
+
+                    <p>ecommerce.dh@sports.com</p>
+                </div>
+                </form>
+
+    </body>
+
 </html>

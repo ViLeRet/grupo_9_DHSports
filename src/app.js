@@ -30,15 +30,17 @@ app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
 
 //Routers
-const mainRoutes = require('./routes/mainRoutes')
+const mainRoutes = require('./routes/mainRoutes');
 const userRoutes = require('./routes/userRoutes');
 
-//app.use('/', mainRoutes);
+
+app.use('/', mainRoutes);
 app.use('/user', userRoutes);
 
 
+
 //app.use('/', mainController);
-//app.use(productRouter)
+app.use(productRouter)
 app.get('/compras', (req, res) => {
     res.render('compras');
 

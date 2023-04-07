@@ -25,6 +25,7 @@
 
     <%- include('partials/header') %>
 
+    
     <main>
 
         <div class="main-login">
@@ -41,9 +42,10 @@
 
                         <i class="fa-solid fa-user"></i>
                         <input 
-                        type="text" 
+                        type="email" 
                         placeholder="Usuario" 
-                        name="userName" 
+                        name="userName"
+                        id="userName" 
                         class="input2 <% locals.errors && errors.userName ? 'is-invalid' : null %>" 
                         value="<% locals.oldData ? oldData.userName : null %>"> 
                         <% if (locals.errors && errors.userName) { %>
@@ -61,6 +63,7 @@
                         type="password" 
                         placeholder="Contraseña" 
                         name="password" 
+                        id="password"
                         class="input3 <% locals.errors && errors.password ? 'is-invalid' : null %>">
                         <% if (locals.errors && errors.password) { %>
                          <div class="text-danger">
