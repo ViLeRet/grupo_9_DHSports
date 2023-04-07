@@ -7,6 +7,9 @@
     "dev": "nodemon src/app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "nodemonConfig": {
+    "ignore": ["src/public/images/**", "src/data/**"]
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/ViLeRet/grupo_9_DHSports.git"

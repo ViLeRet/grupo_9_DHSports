@@ -153,5 +153,29 @@
  },
  {
   "id": 20
+ },
+ {
+  "id": 21,
+  "email": "a@b.com",
+  "name": "Mat",
+  "password": "$2a$10$19ePdyTnrua/jiIWUBlA5.ug176pRdCMzlE7LL6U2ck/pfJ4wWsC2",
+  "confirmPassword": "Hola1",
+  "country": "Argentina"
+ },
+ {
+  "id": 22,
+  "email": "a@c.com",
+  "name": "Nam",
+  "password": "$2a$10$V4GmTMlPG1rV2HNxc/GCvuRQ3l0TB05l4vGxBtUacANo9anIr1zta",
+  "confirmPassword": "Hi123",
+  "country": "Bolivia"
+ },
+ {
+  "id": 23,
+  "email": "a@d.com",
+  "name": "Martin",
+  "password": "$2a$10$T.Qrw93/nzaUF3jvzROF5eNpKCFoijo8p4j6xxttcZ/wVbeFRoXXG",
+  "confirmPassword": "Hola123",
+  "country": "Brasil"
  }
 ]
