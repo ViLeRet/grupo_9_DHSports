@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('partials/head') %>
+    <link rel="stylesheet" href="../css/nuevoProducto.css">
+
+    <body>
+        <%- include('partials/header') %>
+            <main>
+
+                <form class="formulario-container"   method="POST" action="/products/update/<%= product.id %>?_method=PUT"  >
+                   
+
+                    <p class="titulo-container">Nuevo producto</p>
+                    
+                    <div class="formulario-nuevo-producto">
+                        <div>
+                            <label class="titulo">Titulo</label>
+                            <input type="text" name="titulo" id="titulo" placeholder="Detalle del producto" value="<%= product.titulo %>">
+
+                        </div>
+
+                        <div class="name-produc">
+                            <label class="nombreproducto">Tipo de artículo</label>
+                            <input type="text" name="altimg" id="nombreproducto" placeholder="Ej: Zapatillas" value="<%= product.altimg %>">
+
+                        </div>
+
+                        <div class="marca-container">
+
+                            <label class="marca">Seleccionar marca</label>
+                            <select class="marcas" name="marca" >
+                                <option value="0">Seleccione una marca</option>
+                                <option <% product.marca==1?'checked':null %> value="1">Adidas</option>
+                                <option <% product.marca==2?'checked':null %> value="2">Nike</option>
+                                <option <% product.marca==3?'checked':null %> value="3">Reebok</option>
+                                <option <% product.marca==4?'checked':null %> value="4">Puma</option>
+                                <option <% product.marca==5?'checked':null %> value="5">Sauconi</option>
+                                <option <% product.marca==6?'checked':null %> value="6">Asics</option>
+                                <option <% product.marca==7?'checked':null %> value="7">New Balance</option>
+                            </select>
+                        </div>
+
+                        <div class="categoria-container">
+
+                            <label class="categoria">Categoria</label>
+                            <select class="categorias" name="categoria">
+                                <option disabled>Seleccione una categoria</option>
+                                <option <% product.categoria==1?'checked':null %>value="1">Futbol</option>
+                                <option <% product.categoria==2?'checked':null %>value="2">Running</option>
+                                <option <% product.categoria==3?'checked':null %>value="3">Natacion</option>
+                                <option <% product.categoria==4?'checked':null %>value="4">Basquet </option>
+                            </select>
+                        </div>
+
+                        <div class="img-container">
+
+                            <label class="img"> Subir imagen del artículo </label>
+                            <input class="img-producto" type="file" name="images" id="imagenproducto"
+                                accept="jpg, jpeg" multiple>
+
+                        </div>
+
+                        <div class="descripcion-container">
+
+                            <label class="descripcionDeProducto">Descripcion </label>
+                            <textarea name="descripcion" id="descripcion" cols="30"
+                                rows="10" value="<%= product.descripcion %>"></textarea>
+                        </div>
+
+                        <div class="size-container">
+
+                            <label class="talle">Talle</label>
+                            <select name="talle" id="talle" >
+                                <option <% product.talle=='xs'?'checked':null %> value="xs">XS</option>
+                                <option <% product.talle=='s'?'checked':null %> value="s">S</option>
+                                <option <% product.talle=='m'?'checked':null %> value="m">M</option>
+                                <option <% product.talle=='l'?'checked':null %> value="l">L</option>
+                                <option <% product.talle=='xl'?'checked':null %> value="xl">XL</option>
+                                <option <% product.talle=='xxl'?'checked':null %> value="xxl">XXL</option>
+                                <option <% product.talle=='35'?'checked':null %> value="35">35</option>
+                                <option <% product.talle=='36'?'checked':null %> value="36">36</option>
+                                <option <% product.talle=='37'?'checked':null %> value="37">37</option>
+                                <option <% product.talle=='38'?'checked':null %> value="38">38</option>
+                                <option <% product.talle=='39'?'checked':null %> value="39">39</option>
+                                <option <% product.talle=='40'?'checked':null %> value="40">40</option>
+                                <option <% product.talle=='41'?'checked':null %> value="41">41</option>
+                                <option <% product.talle=='42'?'checked':null %> value="42">42</option>
+                                <option <% product.talle=='43'?'checked':null %> value="43">43</option>
+                                <option <% product.talle=='44'?'checked':null %> value="44">44</option>
+                                <option <% product.talle=='45'?'checked':null %> value="45">45</option>
+                            </select>
+                        </div>
+
+                        <div class="color-container">
+
+                            <label class="color-producto">Color </label>
+                            <select name="color" id="color">
+                                <option <% product.color=='rojo'?'checked':null %>value="rojo">Rojo</option>
+                                <option <% product.color=='negro'?'checked':null %>value="negro">Negro</option>
+                                <option <% product.color=='azul'?'checked':null %>value="azul">Azul</option>
+                                <option <% product.color=='amarillo'?'checked':null %>value="amarillo">Amarillo</option>
+                                <option <% product.color=='blanco'?'checked':null %>value="blanco">Blanco</option>
+                                <option <% product.color=='verde'?'checked':null %>value="verde">Verde</option>
+                                <option <% product.color=='gris'?'checked':null %>value="gris">Gris</option>
+                            </select>
+                        </div>
+
+                        <div class="valor-container">
+
+                            <label class="valor-producto">Valor/precio</label>
+                            <input type="number" name="precio" id="valor" placeholder="$" value="<%= product.precio %>">
+
+                        </div>
+
+
+                        <div class="btn">
+                            <button type="submit" class="btn-save"><i class="fa-regular fa-floppy-disk"></i> Guardar</button>
+                        </div>
+
+
+
+                    </div>
+
+
+                </form>
+            <form  method="POST"action="/products/destroy/<%= product.id %>?_method=DELETE" > 
+                <button type="submit">eliminar</button>
+            </form>
+            </main>
+
+            <%- include('partials/footer') %>
+
+    </body>
+
+</html>

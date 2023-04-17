@@ -20,7 +20,7 @@ const controller = {
 	detail: (req, res) => {
 		const { id } = req.params;
 		const products = getProducts();
-		const product = products.find((element) => element.id === +id);
+		const product = products.find((prouct) => prouct.id === +id);
 		res.render('productDetail', { product });
 	},
 
@@ -47,34 +47,42 @@ const controller = {
 		res.redirect('/nuevoProducto');
 	},
 
-	edit: (req, res) => {
-		const products = getProducts();
-		const product = products.find(element => element.id == req.params.id);
-		res.render('nuevoProducto', { productToEdit: product });
+	edit:(req, res)=>{
+		const id = req.params.id
+		const products = getProducts()
+		const product= products.find(product => product.id == id)
+		res.render('productEdit', {
+			product
+		})
+	
 	},
 	update: (req, res) => {
 		const products = getProducts();
-		const productIndex = products.findIndex(element => element.id == req.params.id);
-		const image = req.file ? req.file.filename : products[productIndex].images;
+		const id = req.params.id
+		const productIndex = products.findIndex(prouct => prouct.id == id);
+		const images= req.file ? req.file.filename : products[productIndex].image;
 		products[productIndex] = {
 			...products[productIndex],
-			precio: req.body.precio,
+			titulo: req.body.titulo,
 			categoria: req.body.categoria,
-			images : image,
+			precio: req.body.precio,
+			marca: req.body.marca,
+			talle: req.body.talle,
+			color: req.body.color,
 			descripcion: req.body.descripcion,
-			altimg: req.body.altimg,
+			image:images
 
 			
 		}
 		fs.writeFileSync(productsFilePath, JSON.stringify(products, null, 2));
-		res.redirect('/products');
+		res.redirect('/products/productDetail'+ id);
 	},
 
 	
 	destroy: (req, res) => {
 		const products = getProducts();
-		
-		const productIndex = products.findIndex(element => element.id == req.params.id);
+		const {id} = req.params
+		const productIndex = products.findIndex(prouct => prouct.id == req.params.id);
 		products.splice(productIndex, 1);
 		fs.writeFileSync(productsFilePath, JSON.stringify(products, null, 2));
 		// End

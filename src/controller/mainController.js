@@ -7,14 +7,26 @@ const controller ={
         res.render('index');
     },
     
+    login: (req, res)=> {
+        res.render('login');
+        
+    },
     productCar: (req, res)=> {
         res.render('productCar');
         
     },
    
+    register: (req, res)=> {
+        res.render('register');
+        
+    },
     nuevoProducto: (req, res) => {
         res.render('nuevoProducto')
+    },
+    productEdit:(req, res)=> {
+        res.render('productEdit')
     }
+    
 };
 
 module.exports = controller;
