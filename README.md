@@ -15,3 +15,6 @@ https://www.nike.com/ar/
 
 Todas ellas nos resultaron de interés debido al desarrollo en el front como en las funcionalidades que tienen incorporadas.
 Analizamos tanto la manera correcta de desarrollar un sitio web, como así también los puntos de mejora que intentaremos implementar en DH Sports.
+
+
+Tablero de trabajo: https://trello.com/b/rYEP6StE/dh-sports
