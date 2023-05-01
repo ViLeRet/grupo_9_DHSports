@@ -20,7 +20,7 @@ const controller = {
 	detail: (req, res) => {
 		const { id } = req.params;
 		const products = getProducts();
-		const product = products.find((prouct) => prouct.id === +id);
+		const product = products.find((product) => product.id === +id);
 		res.render('productDetail', { product });
 	},
 
@@ -82,7 +82,7 @@ const controller = {
 	destroy: (req, res) => {
 		const products = getProducts();
 		const {id} = req.params
-		const productIndex = products.findIndex(prouct => prouct.id == req.params.id);
+		const productIndex = products.findIndex(product => product.id == req.params.id);
 		products.splice(productIndex, 1);
 		fs.writeFileSync(productsFilePath, JSON.stringify(products, null, 2));
 		// End

@@ -33,8 +33,8 @@ app.set('views', path.join(__dirname, 'views'));
 app.use(express.static(staticPath))
 
 app.use('/', mainRouter);
-app.use( '/',productRouter)
-app.use('/', userRouter);
+app.use( '/products',productRouter)
+app.use('/user', userRouter);
 
 
 const port = process.env.PORT || 3500;
