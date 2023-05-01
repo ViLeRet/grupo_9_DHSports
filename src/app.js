@@ -7,6 +7,7 @@ const bcryptjs = require('bcryptjs');
 require('dotenv').config();
 
 const mainRouter = require('./routes/mainRoutes');
+const userRouter = require('./routes/userRoutes');
 const productsController = require('./controller/productsController');
 const productRouter= require('./routes/productsRoutes');
 
@@ -33,6 +34,7 @@ app.use(express.static(staticPath))
 
 app.use('/', mainRouter);
 app.use( '/',productRouter)
+app.use('/', userRouter);
 
 
 const port = process.env.PORT || 3500;
