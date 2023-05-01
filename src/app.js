@@ -1,6 +1,9 @@
 const express = require('express');
 const path = require('path');
 const methodOverride =  require('method-override');
+const session = require('express-session');
+const cookieParser = require('cookie-parser');
+const bcryptjs = require('bcryptjs'); 
 require('dotenv').config();
 
 const mainRouter = require('./routes/mainRoutes');
@@ -10,12 +13,19 @@ const productRouter= require('./routes/productsRoutes');
 const app = express();
 
 
-const staticPath = path.resolve(__dirname, './public');
+const staticPath = path.join(__dirname, './public');
 app.use(express.static(staticPath));
 
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 app.use(methodOverride('_method'));
+app.use(session({
+    secret: 'secreto',
+    resave: false,
+    saveUninitialized: false
+}));
+app.use(cookieParser());
+
 
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
