@@ -1,8 +1,9 @@
 const express = require('express');
 const path = require('path');
 const methodOverride =  require('method-override');
+require('dotenv').config();
 
-const mainController = require('./routes/mainRoutes');
+const mainRouter = require('./routes/mainRoutes');
 const productsController = require('./controller/productsController');
 const productRouter= require('./routes/productsRoutes');
 
@@ -20,8 +21,8 @@ app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
 app.use(express.static(staticPath))
 
-app.use('/', mainController);
-app.use( '/products',productRouter)
+app.use('/', mainRouter);
+app.use( '/',productRouter)
 
 
 const port = process.env.PORT || 3500;

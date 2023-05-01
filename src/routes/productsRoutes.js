@@ -43,6 +43,8 @@ router.get('/comprasfutbol', (req, res) => {
 router.get('/nuevoProducto', productsController.create)
 router.get('/productEdit/:id', productsController.edit)
 router.put('/update/:id', productsController.update)
+router.post('/productEdit',productsController.edit)
+
 
 
 router.get('/', productsController.index);
