@@ -1,31 +1,35 @@
-const User = sequelize.define("User", {
-    id: {
-        type: DataTypes.INTEGER,
-        autoIncrement: true,
-        primaryKey: true
-    },
-    name: {
-        type: DataTypes.STRING,
-    },
-    country: {
-        type: DataTypes.VARCHAR,
-    },
-    email: {
-        type: DataTypes.VARCHAR,
-    },
-    password: {
-        type: DataTypes.VARCHAR,
-    },
-    age: {
-        type: DataTypes.INTEGER
-    },
-    createdAt: {
-        type: DataTypes.DATE
-    },
-    updatedAt: {
-        type: DataTypes.DATE
-    }
-});
+module.exports = (sequelize, DataTypes) => {
+    let alias = "Users";
+    let cols = {
+        id: {
+            type: DataTypes.INTEGER,
+            autoIncrement: true,
+            primaryKey: true
+        },
+        name: {
+            type: DataTypes.STRING,
+            allowNull: false
 
-module.exports = User;
+        },
+        country: {
+            type: DataTypes.VARCHAR,
+        },
+        email: {
+            type: DataTypes.VARCHAR,
+        },
+        password: {
+            type: DataTypes.VARCHAR,
+        },
+        age: {
+            type: DataTypes.INTEGER,
+            allowNull: false
+
+        },
+    };
+    let config = { timestamps: false }
+    const User = sequelize.define(alias, cols, config);
+    return User;
+}
+
+
 

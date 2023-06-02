@@ -1,33 +1,37 @@
-const Product = sequelize.define("Product", {
-    id: {
-        type: DataTypes.INTEGER,
-        autoIncrement: true,
-        primaryKey: true
-    },
-    name: {
-        type: DataTypes.STRING,
-    },
-    description: {
-        type: DataTypes.STRING,
-    },
-    price: {
-        type: DataTypes.DOUBLE,
-    },
-    marca: {
-        type: DataTypes.STRING,
-    },
-    talle: {
-        type: DataTypes.INTEGER,
-    },
-    color: {
-        type: DataTypes.STRING,
-    },
-    createdAt: {
-        type: DataTypes.DATE
-    },
-    updateAt: {
-        type: DataTypes.DATE
+module.exports = (sequelize, DataTypes) => {
+    let alias = "Products";
+    let cols = {
+        id: {
+            type: DataTypes.INTEGER,
+            autoIncrement: true,
+            primaryKey: true
+        },
+        name: {
+            type: DataTypes.STRING,
+            allowNull: false
+        },
+        description: {
+            type: DataTypes.STRING,
+            allowNull: false
+        },
+        price: {
+            type: DataTypes.DOUBLE,
+        },
+        marca: {
+            type: DataTypes.STRING,
+        },
+        talle: {
+            type: DataTypes.INTEGER,
+        },
+        color: {
+            type: DataTypes.STRING,
+        },
+    };
+    let config = {
+        timestamps: false
     }
-}); 
-module.exports = Product;
+    const Product = sequelize.define(alias, cols, config);
+    return Product;
+}
+
 
