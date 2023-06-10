@@ -7,26 +7,29 @@ module.exports = (sequelize, DataTypes) => {
             primaryKey: true
         },
         name: {
-            type: DataTypes.STRING,
+            type: DataTypes.TEXT,
             allowNull: false
 
         },
         country: {
-            type: DataTypes.VARCHAR,
-        },
-        email: {
-            type: DataTypes.VARCHAR,
-        },
-        password: {
-            type: DataTypes.VARCHAR,
-        },
-        age: {
-            type: DataTypes.INTEGER,
+            type: DataTypes.STRING,
             allowNull: false
 
         },
+        email: {
+            type: DataTypes.STRING,
+        },
+        password: {
+            type: DataTypes.STRING,
+        }
     };
-    let config = { timestamps: false }
+    let config = {
+        timestamps: false,
+        createdAt: 'created_at',
+        updatedAt: 'updated_at',
+        deletedAt: false ,
+        tableName: 'users'
+    }
     const User = sequelize.define(alias, cols, config);
     return User;
 }

@@ -7,28 +7,35 @@ module.exports = (sequelize, DataTypes) => {
             primaryKey: true
         },
         name: {
-            type: DataTypes.STRING,
+            type: DataTypes.TEXT,
             allowNull: false
         },
         description: {
-            type: DataTypes.STRING,
+            type: DataTypes.TEXT,
             allowNull: false
         },
         price: {
             type: DataTypes.DOUBLE,
         },
+        discount: {
+            type: DataTypes.INTEGER,
+        },
         marca: {
             type: DataTypes.STRING,
         },
         talle: {
-            type: DataTypes.INTEGER,
+            type: DataTypes.STRING,
         },
         color: {
             type: DataTypes.STRING,
         },
     };
     let config = {
-        timestamps: false
+        timestamps: false,
+        createdAt: 'created_at',
+        updatedAt: 'updated_at',
+        deletedAt: false ,
+        tableName: 'products'
     }
     const Product = sequelize.define(alias, cols, config);
     return Product;
