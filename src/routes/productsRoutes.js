@@ -16,6 +16,7 @@ const storage = multer.diskStorage({
 const upload = multer({ storage });
 
 const productsController = require('../controller/productsController');
+const newProductController = require('../controller/newProductController');
 
 router.get('/compras', (req, res) => {
     res.render('compras');
@@ -40,12 +41,15 @@ router.get('/comprasfutbol', (req, res) => {
 
 });
 
-router.get('/nuevoProducto', productsController.create)
+//Nuevas rutas para relacionar a la DB
+router.get('/addProduct', newProductController.add)
+router.post('/store', newProductController.store);
+
+//Rutas antiguas relacionadas a archivos JSON
+
 router.get('/productEdit/:id', productsController.edit)
 router.put('/update/:id', productsController.update)
 router.post('/productEdit',productsController.edit)
-
-
 
 router.get('/', productsController.index);
 

@@ -1,6 +1,4 @@
-const { Sequelize, DataTypes } = require("sequelize");
-
-module.exports = (Sequelize, DataTypes) => {
+module.exports = (sequelize, DataTypes) => {
     let alias = 'ProductBrand';
     let cols ={
         id: {

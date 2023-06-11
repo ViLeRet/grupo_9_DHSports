@@ -35,7 +35,7 @@ module.exports = (sequelize, DataTypes) => {
             allowNull: false
         },
         category: {
-            type: Sequelize.TEXT,
+            type: DataTypes.TEXT,
             allowNull: false
         }
     };

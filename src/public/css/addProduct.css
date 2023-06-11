@@ -13,35 +13,39 @@
     flex-direction: column;   
     gap: 20px;
 }
-.name-produc{
+.name{
     display: flex;
     flex-direction: column;
 }
-.marca-container{
+.brand-container{
     display: flex;
     flex-direction: column;
 }
-.categoria-container{
+.category{
     display: flex;
     flex-direction: column;
 }
-.img-container{
+.images{
     display: flex;
     flex-direction: column;
 }
-.descripcion-container{
+.descrption{
     display: flex;
     flex-direction: column;
 }
-.size-container{
+.size{
     display: flex;
     flex-direction: column;
 }
-.color-container{
+.color{
     display: flex;
     flex-direction: column;
 }
-.valor-container{
+.price{
+    display: flex;
+    flex-direction: column;
+}
+.discount{
     display: flex;
     flex-direction: column;
 }
@@ -58,13 +62,13 @@ input{
     height: 25px;
     background-color: aliceblue;
 }
-#descripcionproducto{
+#description{
     border-radius: 6px;
     font-size: 17px;
 
 }
 
-.marcas, .categorias, #talle, #color{
+.brand, .category, #size, #color{
     font-size: 17px;
     height: 30px;
     border-radius: 6px;

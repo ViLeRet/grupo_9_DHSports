@@ -1,76 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
 <%- include('partials/head') %>
-    <link rel="stylesheet" href="../css/nuevoProducto.css">
+    <link rel="stylesheet" href="../css/addProduct.css">
 
     <body>
         <%- include('partials/header') %>
             <main>
 
-                <form class="formulario-container"   method="POST" action="/" >
+                <form class="formulario-container"   method="POST" action="/products/store" >
                    
 
                     <p class="titulo-container">Nuevo producto</p>
+                    
                     
                     <div class="formulario-nuevo-producto">
                         <div>
                             <label class="titulo">Titulo</label>
                             <input type="text" name="titulo" id="titulo" placeholder="Detalle del producto">
-
+                            
                         </div>
-
-                        <div class="name-produc">
+                        
+                        <div class="name">
                             <label class="nombreproducto">Tipo de artículo</label>
-                            <input type="text" name="nombreproducto" id="nombreproducto" placeholder="Ej: Zapatillas">
+                            <input type="text" name="name" id="name" placeholder="Ej: Zapatillas">
+                            
+                        </div>
+                        <div class="descrption">
+                            
+                            <label class="descrption">Descripción </label>
+                            <textarea name="description" id="description" cols="30"
+                            rows="10"></textarea>
+                        </div>
+                        <div class="price">
+
+                            <label class="valor-producto">Valor/precio</label>
+                            <input type="number" name="price" id="price" placeholder="$">
 
                         </div>
+                        <div class="discount">
 
-                        <div class="marca-container">
+                            <label class="valor-producto">Descuento</label>
+                            <input type="number" name="discount" id="discount" placeholder="$">
+                           
 
-                            <label class="marca">Seleccionar marca</label>
-                            <select class="marcas" name="marca">
-                                <option value="0">Seleccione una marca</option>
-                                <option value="1">Adidas</option>
-                                <option value="2">Nike</option>
-                                <option value="3">Reebok</option>
-                                <option value="4">Puma</option>
-                                <option value="5">Sauconi</option>
-                                <option value="6">Asics</option>
-                                <option value="7">New Balance</option>
-                            </select>
                         </div>
-
-                        <div class="categoria-container">
-
-                            <label class="categoria">Categoria</label>
-                            <select class="categorias" name="categoria">
-                                <option value="0">Seleccione una categoria</option>
-                                <option value="0">Futbol</option>
-                                <option value="0">Running</option>
-                                <option value="0">Natacion</option>
-                                <option value="0">Basquet </option>
-                            </select>
-                        </div>
-
-                        <div class="img-container">
+                        <div class="images">
 
                             <label class="img"> Subir imagen del artículo </label>
-                            <input class="img-producto" type="file" name="images" id="imagenproducto"
+                            <input class="img-producto" type="file" name="images" id="images"
                                 accept="jpg, jpeg" multiple>
 
                         </div>
-
-                        <div class="descripcion-container">
-
-                            <label class="descripcionDeProducto">Descripcion </label>
-                            <textarea name="descripcion" id="descripcion" cols="30"
-                                rows="10"></textarea>
-                        </div>
-
-                        <div class="size-container">
+                        <div class="size">
 
                             <label class="talle">Talle</label>
-                            <select name="talle" id="talle">
+                            <select name="size" id="size">
                                 <option value="xs">XS</option>
                                 <option value="s">S</option>
                                 <option value="m">M</option>
@@ -90,8 +74,7 @@
                                 <option value="45">45</option>
                             </select>
                         </div>
-
-                        <div class="color-container">
+                        <div class="color">
 
                             <label class="color-producto">Color </label>
                             <select name="color" id="color">
@@ -104,17 +87,36 @@
                                 <option value="gris">Gris</option>
                             </select>
                         </div>
+                        <div class="category">
 
-                        <div class="valor-container">
+                            <label class="category">Categoria</label>
+                            <select class="category" name="category">
+                                <option value="0">Seleccione una categoria</option>
+                                <option value="0">Futbol</option>
+                                <option value="0">Running</option>
+                                <option value="0">Natacion</option>
+                                <option value="0">Basquet </option>
+                            </select>
+                        </div>
 
-                            <label class="valor-producto">Valor/precio</label>
-                            <input type="number" name="precio" id="valor" placeholder="$">
+                        <div class="brand-container">
 
+                            <label class="brand">Seleccionar marca</label>
+                            <select class="brand" name="brand">
+                                <option value="0">Seleccione una marca</option>
+                                <option value="1">Adidas</option>
+                                <option value="2">Nike</option>
+                                <option value="3">Reebok</option>
+                                <option value="4">Puma</option>
+                                <option value="5">Sauconi</option>
+                                <option value="6">Asics</option>
+                                <option value="7">New Balance</option>
+                            </select>
                         </div>
 
 
                         <div class="btn">
-                            <button type="submit" class="btn-save"><i class="fa-regular fa-floppy-disk"></i> Guardar</button>
+                            <button type="submit" class="btn-save" href=""><i class="fa-regular fa-floppy-disk"></i> Guardar</button>
                         </div>
 
 
