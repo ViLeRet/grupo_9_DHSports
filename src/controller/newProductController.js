@@ -7,7 +7,7 @@ const controller = {
     add: (req, res) => {
         res.render('addProduct');
     },
-store: async (req, res) => {
+create: async (req, res) => {
     try {
         const productToCreate = {
             name: req.body.name,
