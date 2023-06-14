@@ -7,23 +7,19 @@ module.exports = (sequelize, DataTypes) => {
             primaryKey: true
         },
         name: {
-            type: DataTypes.TEXT,
+            type: DataTypes.STRING,
             allowNull: false
         }
     };
-    let config = {
-        timestamps: false,
-        createdAt: 'created_at',
-        updatedAt: 'updated_at',
-        deletedAt: false ,
-        tableName: 'roles'
-    }
+    let config = { timestamps: false }
     const Role = sequelize.define(alias, cols, config);
-    Role.associate = function(models) {
-        Role.hasMany(models.User, {
-            as: 'users',
-            foreignKey: 'user_id'
+
+    Role.associate = function (models) {
+        Role.belongsTo(models.Users, {
+            as: "Users",
+            foreignKey: "roles_id"
         });
-    }
+    };
+
     return Role;
-}
+};
