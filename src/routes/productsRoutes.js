@@ -42,8 +42,8 @@ router.get('/comprasfutbol', (req, res) => {
 });
 
 //Nuevas rutas para relacionar a la DB
-router.get('/addProduct', newProductController.add)
-router.post('/create', newProductController.create);
+// router.get('/addProduct', newProductController.add)
+// router.post('/create', newProductController.create);
 
 //Rutas antiguas relacionadas a archivos JSON
 

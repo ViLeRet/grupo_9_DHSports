@@ -30,7 +30,7 @@ const validations = [
     body('country').notEmpty().withMessage('Tienes que seleccionar un pais'),
     body('avatar').custom((value, { req }) => {
         const file = req.file;
-        const acceptedExtensions = ['.jpg', '.png', '.gif'];
+        const acceptedExtensions = ['.jpg','.jpeg', '.png', '.gif'];
         if (!file) {
             throw new Error('Tienes que subir una imagen')
         } else {

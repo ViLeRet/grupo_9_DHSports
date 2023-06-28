@@ -1,3 +1,4 @@
+const sequelize = require('sequelize');
 module.exports = (sequelize, DataTypes) => {
     let alias = "Products";
     let cols = {
@@ -9,6 +10,7 @@ module.exports = (sequelize, DataTypes) => {
         name: {
             type: DataTypes.STRING,
             allowNull: false
+            
         },
         description: {
             type: DataTypes.STRING,
@@ -41,11 +43,11 @@ module.exports = (sequelize, DataTypes) => {
             as: 'product_brand',
             foreignKey: 'product_brand_id',
         });
-        Product.belongsToMany(models.ProductImage, {
-            as: 'images',
-            through: 'product_images',
-            foreignKey: 'product_id'
-        });
+        // Product.belongsToMany(models.ProductImage, {
+        //     as: 'images',
+        //     through: 'product_images',
+        //     foreignKey: 'product_id'
+        // });
     }
 
     return Product;

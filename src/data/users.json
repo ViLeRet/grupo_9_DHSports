@@ -177,5 +177,13 @@
   "password": "$2a$10$T.Qrw93/nzaUF3jvzROF5eNpKCFoijo8p4j6xxttcZ/wVbeFRoXXG",
   "confirmPassword": "Hola123",
   "country": "Brasil"
+ },
+ {
+  "id": 24,
+  "email": "ben.mg@hotmail.com",
+  "name": "Carlos",
+  "password": "$2a$10$kgb8KwxhgTcAybE0lVxYouxfdi6P6MBNhYoESA5k0t0zR/4OsZhGi",
+  "confirmPassword": "Carlos123",
+  "country": "Bolivia"
  }
 ]

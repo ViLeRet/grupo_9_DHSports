@@ -6,10 +6,28 @@ const cookieParser = require('cookie-parser');
 const bcryptjs = require('bcryptjs'); 
 require('dotenv').config();
 
+const Sequelize = require('sequelize');
+
+const sequelize = new Sequelize('dh_sports', 'root', '', {
+  host: 'localhost',
+  dialect: 'mysql',
+
+});
+sequelize
+  .authenticate()
+  .then(() => {
+    console.log('Conexión exitosa a la base de datos');
+  })
+  .catch((error) => {
+    console.error('Error al conectar a la base de datos:', error);
+  });
+
+
 const mainRouter = require('./routes/mainRoutes');
 const userRouter = require('./routes/userRoutes');
 const productsController = require('./controller/productsController');
 const productRouter= require('./routes/productsRoutes');
+const { log } = require('console');
 
 const app = express();
 
@@ -35,6 +53,7 @@ app.use(express.static(staticPath))
 app.use('/', mainRouter);
 app.use( '/products',productRouter)
 app.use('/user', userRouter);
+
 
 
 const port = process.env.PORT || 3500;

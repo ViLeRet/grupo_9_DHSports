@@ -19,12 +19,12 @@ module.exports = (sequelize, DataTypes) => {
         tableName: 'roles'
     }
     const ProductCategory = sequelize.define(alias, cols, config);
-    ProductCategory.associate = function(models){
-        ProductCategory.hasMany(models.Product, {
-            as:'products',
-            foreignKey: 'product_id'
-        });
-    }
+    // ProductCategory.associate = function(models){
+    //     ProductCategory.hasMany(models.Product, {
+    //         as:'products',
+    //         foreignKey: 'product_id'
+    //     });
+    // }
 
     return ProductCategory;
 }

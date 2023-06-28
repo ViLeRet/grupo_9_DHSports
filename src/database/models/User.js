@@ -22,10 +22,10 @@ module.exports = (sequelize, DataTypes) => {
         type: DataTypes.TEXT ,
         allowNull:false
       },
-      age: {
-        type: DataTypes.INTEGER ,
-        allowNull:false
-      },
+      // age: {
+      //   type: DataTypes.INTEGER ,
+      //   allowNull:false
+      // },
       avatar:{
         type: DataTypes.TEXT ,
         allowNull:false
@@ -39,12 +39,12 @@ module.exports = (sequelize, DataTypes) => {
         tableName: 'users'
     }
     const User = sequelize.define(alias, cols, config);
-    User.associate = function(models) {
-      User.belongsTo(models.Role, {
-        as: 'role',
-        foreignKey: 'role_id'
-      });
-    }
+    // User.associate = function(models) {
+    //   User.belongsTo(models.Role, {
+    //     as: 'role',
+    //     foreignKey: 'role_id'
+    //   });
+    // }
     return User;
 }
 

@@ -20,14 +20,14 @@ module.exports = (sequelize, DataTypes) => {
   };
   const ProductImage = sequelize.define(alias, cols, config);
 
-  ProductImage.associate = function (models) {
-    ProductImage.belongsToMany(models.Product, {
-      as: 'products',
-      through: 'product_image_product', // Nombre de la tabla intermedia
-      foreignKey: 'product_image_id',
-      otherKey: 'product_id',
-    });
-  };
+  // ProductImage.associate = function (models) {
+  //   ProductImage.belongsToMany(models.Product, {
+  //     as: 'products',
+  //     through: 'product_image_product', // Nombre de la tabla intermedia
+  //     foreignKey: 'product_image_id',
+  //     otherKey: 'product_id',
+  //   });
+  // };
 
   return ProductImage;
 };

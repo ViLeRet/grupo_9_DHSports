@@ -21,7 +21,7 @@ create: async (req, res) => {
             brand: req.body.brand
         }
         await db.Product.create(productToCreate);
-        res.redirect('/addProduct')
+        res.redirect('/')
     } catch (err) {
         res.send(err);
     }
