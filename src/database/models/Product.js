@@ -1,6 +1,6 @@
 const sequelize = require('sequelize');
 module.exports = (sequelize, DataTypes) => {
-    let alias = "Products";
+    let alias = "Product";
     let cols = {
         id: {
             type: DataTypes.INTEGER,
@@ -35,19 +35,23 @@ module.exports = (sequelize, DataTypes) => {
     const Product = sequelize.define(alias, cols, config);
 
     Product.associate = function (models) {
-        Product.hasMany(models.Users, {
-            as: "Users",
+        Product.hasMany(models.User, {
+            as: "users",
             foreignKey: "Product_id"
         });
         Product.belongsTo(models.ProductBrand, {
             as: 'product_brand',
             foreignKey: 'product_brand_id',
         });
-        // Product.belongsToMany(models.ProductImage, {
-        //     as: 'images',
-        //     through: 'product_images',
-        //     foreignKey: 'product_id'
-        // });
+        Product.belongsTo(models.ProductCategory, {
+            as: 'product_category',
+            foreignKey: 'category',
+        });
+        Product.belongsToMany(models.ProductImage, {
+            as: 'images',
+            through: 'product_images',
+            foreignKey: 'product_id'
+        });
     }
 
     return Product;

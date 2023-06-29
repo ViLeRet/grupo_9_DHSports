@@ -49,7 +49,7 @@ const validations = [
 router.get('/register', guestMiddleware,usersController.register);
 
 //Procesamiento del registro
-router.post('/register',uploadFile.single('avatar'), validations, usersController.processRegister);
+router.post('/register',uploadFile.single('avatar'), validations, usersController.create);
 
 //Formulario de Login
 router.get('/login',guestMiddleware, usersController.login);

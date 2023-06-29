@@ -5,6 +5,7 @@ const { validationResult } = require('express-validator');
 const db = require('../database/models');
 const sequelize = db.Sequelize;
 const { Op } = require('sequelize');
+const { log } = require('console');
 
 // const User = require('../models/User');
 // const User = db.User;
@@ -15,23 +16,42 @@ const controller = {
     return res.render('register');
 
   },
-  //Prueba para la DB
-  // create: 
-  //     function(req, res) {
-  //       db.User
-  //         .create(
-  //           {
-  //             email: req.body.email,
-  //             name: req.body.name,
-  //             password: req.body.password,
-  //             country: req.body.country,
-  //             avatar: req.body.avatar
-  //           }
-  //         )
-  //         .then(() => {
-  //           return res.redirect('/user/login')})
-  //         .catch(error => res.send(error))
-  //     },
+  // Prueba para la DB
+  create: 
+      async function(req, res) {
+        let resultValidation = validationResult(req);
+     if (resultValidation.errors.length > 0) {
+       return res.render('register', {
+         errors: resultValidation.mapped(),
+         oldData: req.body
+       });
+     }
+     let userInDB = await db.User.findOne({where:{'email': req.body.email}});
+     if (userInDB) {
+       return res.render('register', {
+         errors: {
+           email: {
+             msg: 'Este email ya está registrado'
+           }
+         },
+         oldData: req.body
+       });
+     }
+        console.log(req.file);
+        db.User
+          .create(
+            {
+              email: req.body.email,
+              name: req.body.name,
+              password: bcryptjs.hashSync(req.body.password, 10),
+              country: req.body.country,
+              avatar: req.file? req.file.filename: 'default.jpg'
+            }
+          )
+          .then(() => {
+            return res.redirect('/user/login')})
+          .catch(error => res.send(error))
+      },
   
      processRegister: (req, res) => {
      let resultValidation = validationResult(req);
