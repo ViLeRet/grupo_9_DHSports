@@ -54,7 +54,7 @@ app.use('/', mainRouter);
 app.use( '/products',productRouter)
 app.use('/user', userRouter);
 
-
+app.get('/api/products', productsController.list);
 
 const port = process.env.PORT || 3500;
 app.listen(port, () => {
