@@ -4,7 +4,13 @@ const productsApiController = require('../../controller/api/productsApiControlle
 
 router.get('/', productsApiController.list);
 router.get('/detail/:id', productsApiController.detail);
-router.post('/create', productsApiController.create);
-router.delete('/delete/:id', productsApiController.delete);
+router.post('/create', (req, res) => {
+  productsApiController.create(req, res); // Llama a la función productsApiController.create
+});
+router.delete('/delete/:id', (req, res) => {
+    productsApiController.delete(req, res); // Llama a la función productsApiController.delete
+  });
 
 module.exports = router;
+
+  

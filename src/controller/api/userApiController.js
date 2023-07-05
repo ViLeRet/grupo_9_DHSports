@@ -2,52 +2,61 @@ const db = require('../../database/models');
 const Op = db.Sequelize.Op;
 
 module.exports = {
-    list: (req, res) => {
-        db.User.findAll()
-            .then((users) => {
-                return res.status(200).json({
-                    meta: {
-                        status: 200,
-                        total: users.length,
-                        url: '/api/users'
-                    },
-                    data: users
-                });
-            })
-            .catch((error) => {
-                console.error(error);
-                return res.status(500).json({
-                    message: 'Ocurrió un error al buscar usuarios',
-                    error: error.message
-                });
+    list: async (req, res) => {
+        try {
+            const users = await db.User.findAll();
+            const userCount = users.length;
+
+            const userList = users.map(user => {
+                return {
+                    id: user.id,
+                    name: user.name,
+                    email: user.email,
+                    detail: `/api/users/${user.id}`
+                };
             });
+
+            res.status(200).json({
+                count: userCount,
+                users: userList
+            });
+        } catch (error) {
+            console.error(error);
+            res.status(500).json({
+                message: 'Ocurrió un error al buscar usuarios',
+                error: error.message
+            });
+        }
     },
 
-    detail: (req, res) => {
-        db.User.findByPk(req.params.id)
-            .then((user) => {
-                if (user) {
-                    return res.status(200).json({
-                        meta: {
-                            status: 200,
-                            total: 1,
-                            url: '/api/users'
-                        },
-                        data: user
-                    });
-                } else {
-                    return res.status(404).json({
-                        message: 'El usuario no existe'
-                    });
-                }
-            })
-            .catch((error) => {
-                console.error(error);
-                return res.status(500).json({
-                    message: 'Ocurrió un error al buscar el usuario',
-                    error: error.message
-                });
+    detail: async (req, res) => {
+        try {
+            const userId = req.params.id;
+            const user = await db.User.findByPk(userId, {
+                attributes: { exclude: ['password', 'category'] }
             });
+
+            if (user) {
+                const userProfile = {
+                    id: user.id,
+                    name: user.name,
+                    email: user.email,
+                    profileImage: `/api/users/${user.id}/image`
+                };
+
+                res.status(200).json(userProfile);
+            } else {
+                res.status(404).json({
+                    message: 'El usuario no existe'
+                });
+            }
+        } catch (error) {
+            console.error(error);
+            res.status(500).json({
+                message: 'Ocurrió un error al buscar el usuario',
+                error: error.message
+            });
+        }
     },
 
     create: async (req, res) => {
