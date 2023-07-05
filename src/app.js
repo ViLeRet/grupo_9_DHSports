@@ -29,6 +29,11 @@ const productsController = require('./controller/productsController');
 const productRouter= require('./routes/productsRoutes');
 const { log } = require('console');
 
+//rutas de apis 
+
+const productsApiRoutes = require ('./routes/api/productsApiRoutes');
+const userApiRoutes = require ('./routes/api/userApiRoutes');
+
 const app = express();
 
 
@@ -53,6 +58,12 @@ app.use(express.static(staticPath))
 app.use('/', mainRouter);
 app.use( '/products',productRouter)
 app.use('/user', userRouter);
+
+// USO DE APIS
+
+app.use('/api/products', productsApiRoutes);
+app.use ('/api/user',userApiRoutes);
+
 
 app.get('/api/products', productsController.list);
 
