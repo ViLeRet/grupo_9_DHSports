@@ -89,7 +89,7 @@ const controller = {
 
   //Proceso de Login
   processLogin: (req, res) => {
-    let userToLogin = User.findByField('email', req.body.email);
+    let userToLogin = db.User.findOne('email', req.body.email);
     if (userToLogin) {
       let passwordOk = bcryptjs.compareSync(req.body.password, userToLogin.password);
      
